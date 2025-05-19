@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+  const [isDrawerOpen ,setIsDrawerOpne] = useState(false)
+
+   const toggleDrawer = () => {
+    setIsDrawerOpne(!isDrawerOpen)
+  }
+
+  const closeDrawer = () => {
+    setIsDrawerOpne(false)
+  }
+
   return (
     <>
    <div className="bg-black text-white text-xs px-4 py-1 flex justify-between items-center">
@@ -21,8 +31,33 @@ const Header = () => {
           <li><Link to='/contact' href="#" className="hover:text-orange-600 transition">Contact</Link></li>
         </ul>
         <div className="hidden md:block bg-orange-600 text-white px-4 py-1 rounded cursor-pointer hover:bg-orange-700 transition">Find a table</div>
-        <div className="md:hidden cursor-pointer text-gray-600">&#9776;</div>
+        <div onClick={toggleDrawer} className="md:hidden cursor-pointer text-gray-600">&#9776;</div>
       </nav>
+
+      {isDrawerOpen && (
+        <div className="md:hidden fixed top-0 left-0 w-3/4 h-full bg-white shadow-lg z-50 px-6 py-4 transition-all">
+          <div className="flex justify-between items-center mb-4">
+            <div className="text-xl font-bold text-orange-600">Hungry</div>
+            <button onClick={closeDrawer} className="text-2xl text-gray-600">&times;</button>
+          </div>
+          <ul className="flex flex-col space-y-4 text-sm font-medium text-gray-600">
+            <li><Link to="/" onClick={closeDrawer} className="hover:text-orange-600">Home</Link></li>
+            <li><Link to="/about" onClick={closeDrawer} className="hover:text-orange-600">About</Link></li>
+            <li>
+              <a 
+                href="/menu_250420_142636[1].pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-orange-600"
+                onClick={closeDrawer}
+              >
+                Menu
+              </a>
+            </li>
+            <li><Link to="/contact" onClick={closeDrawer} className="hover:text-orange-600">Contact</Link></li>
+          </ul>
+        </div>
+      )}
       </>
   )
 }
