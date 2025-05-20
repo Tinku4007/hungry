@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import MainLayout from "../layout/MainLayout";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
+import Event from "../pages/event/Event";
 
 export const route = createBrowserRouter(
     [
@@ -20,10 +21,15 @@ export const route = createBrowserRouter(
                     path: "/about",
                     element: <About />
                 },
-                    {
+                {
                     index: true,
                     path: "/contact",
                     element: <Contact />
+                },
+                {
+                    index: true,
+                    path: "/event",
+                    element: <Event />
                 },
             ]
         }

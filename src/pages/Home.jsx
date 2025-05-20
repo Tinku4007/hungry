@@ -1,6 +1,8 @@
 import React from 'react'
 import TheameButton from '../components/common/TheameButton'
 import DeliciousExperiences from '../components/common/DeliciousExperiences'
+import ImageText from '../components/common/ImageText'
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 
 const Home = () => {
   return (
@@ -12,34 +14,46 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl leading-snug">
-            Discover the true meaning of luxury dining
+            WELCOME
           </h1>
-          <p className="text-gray-300 max-w-xl mt-4 text-sm md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-          </p>
-          <TheameButton title=' Book a table now' />
+          <TheameButton title='ORDER ONLINE' />
         </div>
       </section>
 
       {/* Delicious food & exquisite drinks */}
-      <section className="max-w-7xl mx-auto px-4 md:px-10 my-16 grid md:grid-cols-2 gap-10">
-        <div className="flex flex-col space-y-6">
-          <img src="https://pxdraft.com/wrap/hungry/assets/img/about-1.jpg" alt="Food" className="rounded-lg shadow-lg object-cover h-64 w-full" />
-          <img src="https://pxdraft.com/wrap/hungry/assets/img/about-1-1.jpg" alt="Drinks" className="rounded-lg shadow-lg object-cover h-64 w-full" />
-        </div>
-        <div className="flex flex-col justify-center space-y-6">
-          <h2 className="text-orange-600 uppercase font-semibold tracking-wide text-sm">Quality Service</h2>
-          <h3 className="text-3xl font-serif font-semibold">Delicious food & exquisite drinks</h3>
-          <p className="text-gray-600 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-          </p>
-          <p className="text-sm text-gray-400">Mon-Fri: 9 AM - 22 PM <br /> Sat-Sun: 9 AM - 23 PM</p>
-          <TheameButton title='Book a table now' />
-        </div>
-      </section>
+      <ImageText
+        heading='WELCOME TO HUDSON GEORGE'
+        image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_intro.jpg'
+        para='Hudson George is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents of greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
+        secondPara='As a family-owned business, we strive to build an atmosphere that welcomes you in with the warmth of coming home; The surrounds and relaxed ambience are complemented by food and beverages set to heighten your senses and calm the noise of the day.'
+      />
 
-      {/* Why we are the best */}
-      <section
+      <ImageText
+        // imageWrapper='min-h-[500px]'
+        reverse={true}
+        heading='EATERY'
+        image='https://scontent.fixc4-2.fna.fbcdn.net/v/t1.6435-9/107488056_290607019018077_8337921934644874686_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=aLEuDPvm4A4Q7kNvwHqsuVI&_nc_oc=Adm4zX6f9CPYF2a0fIX2alv18pX74TTWNq_aw-OkFHY-PDOdUtH266WxU7pEX7mBBWMRfnuRc-eOrjtpE271FCdF&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=jPRPtsnyd0Jj4S6f4dvsCw&oh=00_AfJo3ClW2VdMMDpQNDwAhLPiX8J_0XfmgjGJIovPsBp68Q&oe=685430CB'
+        para='Take a break from the week’s hectic run-around with classic Australian breakfasts alongside remarkable coffee. Be welcomed by the rich aromas of Five Senses coffee and daily fresh treats from Sonoma Bakery.'
+        secondPara='Hudson George is a home away from home. Open for Breakfast, Lunch Daily, and Dinner Thursday, Friday and Saturday.'
+        third='We look forward to welcoming you and your family and friends soon!'
+      />
+
+      <ImageText
+        heading='EVENTS'
+        image='https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/470185357_1349871159758319_3884551672326250717_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=q0dJ1o-voMoQ7kNvwFtZ3Hl&_nc_oc=AdkSzwZK9pMcHeXvyzGySGcSzKzfStlGLR11mnXSoaaKxQ-hYuFoHSVshuoh-vdvXD55hYpsBGMI0d_O9wPaWnvW&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=rI8m56ud9lSiX233vK16jg&oh=00_AfLtJagLJK4NTFFBRUxmhMt-VDjA5LEsgUu2aPHmPtkDaA&oe=68326519'
+        para='When the occasion arises, experience wholesome Mediterranean-inspired lunches and dinners together with a carefully selected collection of wine, beer and cider. Here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed indoor alfresco area we able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
+        secondPara='Speak to one of the team next time your in and we would love to discuss your event.'
+      />
+
+      <ImageText
+        // imageWrapper='min-h-[500px]'
+        reverse={true}
+        heading='CATERING'
+        image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_catering.jpg'
+        para='When you have a Work Meeting, Get together or just Stuck in the office? That’s ok, we offer corporate catering in the Hills delivered to your door! We have a variety of menus or we can tailor something to you your requirements. Speak to one of the team next time your in or simply send us an email.'
+      />
+
+      {/* <section
         className="relative bg-cover bg-center py-20"
         style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}
       >
@@ -47,7 +61,6 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid grid-cols-1 md:grid-cols-4 gap-6">
           <h2 className="col-span-full text-3xl font-semibold mb-6 text-center md:text-left">Why we are the best in food quality</h2>
 
-          {/* Card */}
           <div className="bg-black bg-opacity-40 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-2">Skilled Chefs</h3>
             <p className="text-sm">Learn lorem dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -67,12 +80,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Selected Menu */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
         <h2 className="text-center text-3xl font-serif font-semibold mb-10">Selected Menu</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Menu List */}
           <ul className="space-y-5">
             <li>
               <div className="flex justify-between">
@@ -125,7 +136,6 @@ const Home = () => {
             </li>
           </ul>
 
-          {/* Right Menu List - Duplicate same for demonstration */}
           <ul className="space-y-5">
             <li>
               <div className="flex justify-between">
@@ -180,7 +190,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Elegant atmosphere */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 grid md:grid-cols-2 gap-10 items-center py-20">
         <div>
           <h2 className="text-3xl font-serif font-semibold mb-6">Immerse yourself in an elegant atmosphere</h2>
@@ -200,7 +209,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Excellent service */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center gap-10 py-20">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-serif font-semibold mb-6">Our excellent service and top quality dishes are unmatched. Pick the best.</h2>
@@ -216,7 +224,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Wine selection */}
       <section
         className="relative bg-cover bg-center py-20"
         style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-4.jpg" }}
@@ -256,7 +263,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Happy Customers */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 text-center">
         <h2 className="text-3xl font-serif font-semibold mb-12">Happy Customer</h2>
 
@@ -280,10 +286,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Delicious experiences */}
-    <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
+      <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
 
-      {/* Most Recent News */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
         <h2 className="text-3xl font-serif font-semibold mb-10 text-center">Most Recent News</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -303,9 +307,91 @@ const Home = () => {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
-    
+      <div className='max-w-7xl mx-auto px-4 md:px-10 py-20'>
+            <h3 className="text-3xl mb-5 text-orange-600 font-serif font-semibold">FAQ’s</h3>
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <h3 className="text-xl text-black font-serif font-semibold">How can I make a booking at your restaura</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p className="text-gray-600 leading-relaxed">
+              Head to our website to open a booking at Hudson George, one of the leading Castle Hill restaurants. Select a date and time to book a table for up to 8 guests. For bookings of 10 or more people, enter the number in the box corresponding to the ‘request for a group’ section. You can call us at (02) 9194 3288 to make your request, and we will do our best to accommodate your request in line with the Government restrictions and regulations.
+            </p>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <h3 className="text-xl text-black font-serif font-semibold">Can I book Hudson George for a private event?</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p className="text-gray-600 leading-relaxed">
+              Yes! Hudson George, one of the best
+              , also cater for group celebrations and private events. We feature Mediterranean-inspired lunches and dinners together with a carefully selected collection of wine, beer and cider. Our relaxed alfresco area provides the perfect space for your next event including, birthdays, graduation parties, and more. You can relax and unwind with your group in a casual setting. Call (02) 9194 3288 to book your space.
+            </p>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <h3 className="text-xl text-black font-serif font-semibold">Do you offer corporate catering services?</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p className="text-gray-600 leading-relaxed">
+              Yes! Do you have a work meeting or get together? Stuck in the office? We have got you covered! Hudson George, one of the
+              , offer corporate catering in the Hills delivered to your door. Our delicious menu option includes a variety of food options that can be tailored to meet your requirements. Delivery available!
+            </p>
+          </AccordionDetails>
+        </Accordion>
+
+
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <h3 className="text-xl text-black font-serif font-semibold">What’s so special about your Five Senses Coffee?</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p className="text-gray-600 leading-relaxed">
+              Five Senses coffee at our
+              is made with the purpose to impact people positively through coffee. At Hudson George, we believe that delicious coffee has an incredible ability to connect people, relationships that make the world just that little bit better. Call (02) 9194 3288 for more details.
+            </p>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion>
+          <AccordionSummary
+            // expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <h3 className="text-xl text-black font-serif font-semibold">Where to get the best coffee in Castle?</h3>
+          </AccordionSummary>
+          <AccordionDetails>
+            <p className="text-gray-600 leading-relaxed">
+              Hudson George, a top-rated
+              , is the perfect place for coffee addicts and aficionados. At Hudson George, you are welcomed by the rich aromas of Five Senses coffee and daily fresh treats. We serve you a classic Australian breakfast alongside remarkable coffee. We are open for breakfast and lunch daily on Thursday, Friday, and Saturday. Call (02) 9194 3288 to find out more.
+            </p>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+
     </div>
   )
 }

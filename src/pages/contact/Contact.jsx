@@ -17,7 +17,7 @@ const Contact = () => {
       <div className="grid md:grid-cols-2 gap-8 px-6 py-12 max-w-6xl mx-auto">
         <div className="bg-gray-50 p-8 rounded shadow">
           <h3 className="text-xl font-semibold mb-2">You Can Mail Us</h3>
-          <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           <form className="grid gap-4">
             <div className="grid grid-cols-2 gap-4">
               <input className="border p-2 rounded" placeholder="Your Name" />
@@ -35,16 +35,18 @@ const Contact = () => {
 
         <div className="p-8">
           <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
-          <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           <div className="space-y-4 text-sm">
             <div>
               <strong>Phone:</strong> +01 5555 6565 6565
             </div>
             <div>
-              <strong>Email:</strong> info@domain.com
+              <strong>Email:</strong> info@hudsongeorge.com.au
             </div>
             <div>
-              <strong>Address:</strong><br />1600 Amphitheatre Parkway, New York WC1 1BA
+              <strong>Address:</strong><br />Home Co Hills – South Side
+Hudson Ave entrance
+56/16 Victoria Ave, Castle Hill NSW 2154
             </div>
             <div className="flex space-x-4 mt-4">
               <a href="#">🔵</a>
@@ -57,7 +59,7 @@ const Contact = () => {
       </div>
 
       {/* Locations */}
-      <div className="bg-gray-100 py-10 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {/* <div className="bg-gray-100 py-10 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {["NEW YORK", "NEW YORK", "LOS ANGELES", "LAS VEGAS"].map((city, index) => (
           <div key={index} className="text-sm space-y-2">
             <strong>{city}</strong>
@@ -66,7 +68,7 @@ const Contact = () => {
             <p>+01 8585 855 855</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Map */}
       <div className="h-96 my-10 w-full">
