@@ -23,7 +23,7 @@ const Header = () => {
       <nav className="flex justify-between items-center py-5 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
         <div className="text-2xl font-bold text-orange-600">
           HUDSON GEORGE
-          <Link to='/'><img className='absolute h-[150px] top-20' src='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/logo.png' alt="" /></Link>
+          {/* <Link to='/'><img className='absolute h-[150px] top-20' src='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/logo.png' alt="" /></Link> */}
         </div>
         <ul className="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
           <li><Link href="/" className="hover:text-orange-600 transition">Home</Link></li>
@@ -52,17 +52,6 @@ const Header = () => {
             <li><Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Menu</Link></li>
             <li><Link to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Catering</Link></li>
             <li><Link to="#" className="hover:text-orange-600 transition">Gallery</Link></li>
-            <li>
-              <a
-                href="/menu_250420_142636[1].pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-orange-600"
-                onClick={closeDrawer}
-              >
-                Menu
-              </a>
-            </li>
             <li><Link to="/contact" onClick={closeDrawer} className="hover:text-orange-600">Contact</Link></li>
           </ul>
         </div>

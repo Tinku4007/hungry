@@ -25,10 +25,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Working Hours</h3>
             <div className="text-gray-300 space-y-2">
-              <p>Monday - Friday <span className="float-right">09:00 - 22:00</span></p>
-              <p>Saturday <span className="float-right">11:00 - 00:00</span></p>
-              <p>Sunday <span className="float-right">11:00 - 23:00</span></p>
-              <p>* Happy hour <span className="float-right">17:00 - 21:00</span></p>
+              <p>Monday - Friday <span className="float-right">06:00 am - 2:30 pm</span></p>
+              <p>Saturday <span className="float-right">Closed</span></p>
+              <p>Sunday <span className="float-right">Closed</span></p>
             </div>
           </div>
 

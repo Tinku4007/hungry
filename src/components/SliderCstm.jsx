@@ -9,21 +9,37 @@ const SliderCstm = ({ item }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, A11y, Autoplay]}
-      spaceBetween={50}
-      slidesPerView={3}
+      spaceBetween={20}
       navigation
-      className='w-full h-full'
       pagination={{ clickable: true }}
       autoplay={{ delay: 2000, disableOnInteraction: false }}
       speed={1500}
       loop={true}
+      className='w-full h-full'
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1.5,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+        },
+      }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
       {
         item?.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="h w-full overflow-hidden">
+            <div className="w-full overflow-hidden">
               <img
                 src={item}
                 alt={`slide-${index}`}
@@ -34,7 +50,7 @@ const SliderCstm = ({ item }) => {
         ))
       }
     </Swiper>
-  )
-}
+  );
+};
 
 export default SliderCstm;
