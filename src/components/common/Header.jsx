@@ -34,7 +34,7 @@ const Header = () => {
           <li><Link to="#" className="hover:text-orange-600 transition">Gallery</Link></li>
           {/* <li><a href="#" className="hover:text-orange-600 transition">Our History</a></li> */}
           {/* <li><Link  className="hover:text-orange-600 transition">Blog</Link></li> */}
-          <li><Link to='/contact' href="#" className="hover:text-orange-600 transition">Contact</Link></li>
+          <li><Link to='/contact'  className="hover:text-orange-600 transition">Contact</Link></li>
         </ul>
         <div className="hidden md:block bg-orange-600 text-white px-4 py-1 rounded cursor-pointer hover:bg-orange-700 transition">BOOK ONLINE</div>
         <div onClick={toggleDrawer} className="md:hidden cursor-pointer text-gray-600">&#9776;</div>
@@ -49,6 +49,9 @@ const Header = () => {
           <ul className="flex flex-col space-y-4 text-sm font-medium text-gray-600">
             <li><Link to="/" onClick={closeDrawer} className="hover:text-orange-600">Home</Link></li>
             <li><Link to="/about" onClick={closeDrawer} className="hover:text-orange-600">About</Link></li>
+            <li><Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Menu</Link></li>
+            <li><Link to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Catering</Link></li>
+            <li><Link to="#" className="hover:text-orange-600 transition">Gallery</Link></li>
             <li>
               <a
                 href="/menu_250420_142636[1].pdf"
