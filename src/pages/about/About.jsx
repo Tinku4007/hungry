@@ -34,7 +34,7 @@ const About = () => {
                 reverse={true}
                 heading='ABOUT US'
                 image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/about_img1.jpg'
-                para='Hudson George is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
+                para='Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
                 secondPara='As a family-owned business, we strive to build an atmosphere that welcomes you in with the warmth of coming home; The surrounds and relaxed ambience are complemented by food and beverages set to heighten your senses and calm the noise of the day.'
             />
 
@@ -73,7 +73,7 @@ const About = () => {
             <section className="py-16 px-4 md:px-16">
                 <h3 className="text-center text-orange-500 text-sm font-semibold">Our Specials</h3>
                 <h2 className="text-center text-3xl font-bold mb-10">A Taste You’ll Never Forget</h2>
-                <SliderCstm item={['https://scontent.fixc4-4.fna.fbcdn.net/v/t39.30808-6/485724217_1251484023423958_2322232601349313077_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IrLdg-eqy_oQ7kNvwFERQig&_nc_oc=AdlF7W8JZFH67du23C_1EwO8wHpLBcbRWTxs9cG2viV7WhjsCwbyeylXNDy8VJySuIPgI9cL5S26j6vv1kAnhM3B&_nc_zt=23&_nc_ht=scontent.fixc4-4.fna&_nc_gid=jVVKoQwNMUH2XEOoUhGE6g&oh=00_AfJMGFJ_vtMlJNQmr0MRCkO0sCXd0sBpGyE4a_yALwE9Gg&oe=6832717D',
+                <SliderCstm item={['https://media.istockphoto.com/id/867378776/photo/chef-is-working-in-an-italian-restaurant.jpg?s=612x612&w=0&k=20&c=a-MG3kO4wXiuc7jPcF2u31grt6y_hwwM11Ye4pgE2is=','https://media.istockphoto.com/id/530625117/photo/traditional-hungarian-xmas-rolls-bejgli.jpg?s=612x612&w=0&k=20&c=PQK8Jmd5k7vZN8sZKDPH0OQrkr6N2lyTbRT_fjuG9UY=',
                     'https://scontent.fixc4-2.fna.fbcdn.net/v/t39.30808-6/487206015_1254290099810017_4456269061556823549_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RN8CFIQtc_EQ7kNvwEtogEy&_nc_oc=Adni03V7BqKe8HKKcgb63LjiExrv0jvZ2kYCelHdgfE0hxAeCqEStUATSrD6zJ5q9TpbUAA1wMPlUsvKcC9LiUxq&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=XEUdn6F_VCOYtFLFzwwsig&oh=00_AfKNxWW503ClllwlIi-0ZQ8LV-cp7Ki_r0SRrZzMKcxkcw&oe=683270A9',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486639365_1253632353209125_8298364058678702170_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=68UhGyvo3BQQ7kNvwHPeNjt&_nc_oc=AdmI-gYCHXoDUerHz1VkW0_y1xom7NH2noQfvLlQlzEVlqnPilcwsUe4Y4DhBR0qYgZXeY1nzgr1Hdy2zaXA0QNk&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=amTGSVgP5ODUq-m4bJxQMA&oh=00_AfLWuYjGCiSecduUpP6Y4S1hlyb3GvNbg44p32eJ-C5KZw&oe=6832771E',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486679754_1252974476608246_979976901725611562_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vdI6nGE4pDcQ7kNvwFpHwfc&_nc_oc=AdmKFucCYiNAWsjC0bh4a-B7-U_k1RTf1Vm1Ub6VLokCDvlcc4f6Rw1bZzHxPPPYBpHwyvwhD39x_D9ckoe6aMzB&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=qJXWEdPxjaji9c4_Lvzc0Q&oh=00_AfK_2jII8DrxY2WG6okgK5wtWVysdrT0qMv4K62Nc5oM8g&oe=68327C8A'
@@ -102,6 +102,9 @@ const About = () => {
                 <div className="grid grid-cols-1 content-center  md:grid-cols-3 gap-6">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         {/* <p className="mb-2">Awesome Experience.</p> */}
+                        <div className='text-center flex justify-center mb-2'>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyz09Y4dgOh8sZ4Xhp0SyGrhtL1eZYfUrRkRphXiTXEOiiJptiEg=w54-h54-p-rp-mo-ba4-br100" alt="" />
+                        </div>
                         <h4 className="font-semibold mb-3">Alexander Little</h4>
                         <div className="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
                         <p className="text-sm text-gray-600 mb-4">
@@ -110,6 +113,9 @@ const About = () => {
                     </div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         {/* <p className="mb-2">Awesome Experience.</p> */}
+                        <div className='flex justify-center mb-2'>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVvlQAPR4drXJkhgcwLyu5gRvHlBkdwJHRXq-ybupTs1ujhmFm3=w54-h54-p-rp-mo-ba3-br100" alt="" />
+                        </div>
                         <h4 className="font-semibold mb-3">Sanjeshni Lata</h4>
                         <div className="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
                         <p className="text-sm text-gray-600 mb-4">
@@ -117,6 +123,9 @@ const About = () => {
                         </p>
                     </div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
+                        <div className='flex justify-center mb-2'>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVIB7O1z0dW2r-E2dC2s8wML47Jy2e-HGKBBUaypVAXSscoKiA=w54-h54-p-rp-mo-ba5-br100" alt="" />
+                        </div>
                         {/* <p className="mb-2">Awesome Experience.</p> */}
                         <h4 className="font-semibold mb-3">Chris Dow</h4>
                         <div className="flex justify-center mb-2">⭐⭐⭐⭐</div>
@@ -126,6 +135,9 @@ const About = () => {
                     </div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         {/* <p className="mb-2">Awesome Experience.</p> */}
+                        <div className='flex justify-center mb-2'>
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWeh3bLk7pFb8YdHW4o6WOzIYYdqxKCyAxy1VoED1y5YDHBuJ9E=w54-h54-p-rp-mo-ba5-br100" alt="" />
+                        </div>
                         <h4 className="font-semibold mb-3">Bill</h4>
                         <div className="flex justify-center mb-2">⭐⭐⭐⭐</div>
                         <p className="text-sm text-gray-600 mb-4">

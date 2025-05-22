@@ -16,7 +16,7 @@ const Event = () => {
                 // imageWrapper='min-h-[500px]'
                 heading='EVENT'
                 image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_1.jpg'
-                para='When the occasion arises, experience wholesome Mediterranean-inspired lunches and dinners together with a carefully selected collection of wine, beer and cider. We are here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed alfresco area we are able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
+                para='Hungry Bakers is a home away from home open for Breakfast and Lunch Monday to Friday. We are here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed alfresco area we are able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
                 secondPara='Chat with our team next time you’re in to discuss your event or contact us by phone or email.'
             />
 

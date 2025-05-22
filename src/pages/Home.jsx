@@ -3,6 +3,7 @@ import TheameButton from '../components/common/TheameButton'
 import DeliciousExperiences from '../components/common/DeliciousExperiences'
 import ImageText from '../components/common/ImageText'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
+import her_sec from "../assets/images/WhatsApp Image 2025-05-22 at 22.28.32_efff7f22.jpg"
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-[80vh]"
-        style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-1.jpg)" }}
+        style={{ backgroundImage: `url(${her_sec})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl leading-snug">
@@ -22,9 +23,9 @@ const Home = () => {
 
       {/* Delicious food & exquisite drinks */}
       <ImageText
-        heading='WELCOME TO HUDSON GEORGE'
+        heading='WELCOME TO HUNGRY BAKER'
         image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_intro.jpg'
-        para='Hudson George is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents of greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
+        para='Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents of greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
         secondPara='As a family-owned business, we strive to build an atmosphere that welcomes you in with the warmth of coming home; The surrounds and relaxed ambience are complemented by food and beverages set to heighten your senses and calm the noise of the day.'
       />
 
@@ -32,16 +33,16 @@ const Home = () => {
         // imageWrapper='min-h-[500px]'
         reverse={true}
         heading='EATERY'
-        image='https://scontent.fixc4-2.fna.fbcdn.net/v/t1.6435-9/107488056_290607019018077_8337921934644874686_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=aLEuDPvm4A4Q7kNvwHqsuVI&_nc_oc=Adm4zX6f9CPYF2a0fIX2alv18pX74TTWNq_aw-OkFHY-PDOdUtH266WxU7pEX7mBBWMRfnuRc-eOrjtpE271FCdF&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=jPRPtsnyd0Jj4S6f4dvsCw&oh=00_AfJo3ClW2VdMMDpQNDwAhLPiX8J_0XfmgjGJIovPsBp68Q&oe=685430CB'
+        image='https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg'
         para='Take a break from the week’s hectic run-around with classic Australian breakfasts alongside remarkable coffee. Be welcomed by the rich aromas of Five Senses coffee and daily fresh treats from Sonoma Bakery.'
-        secondPara='Hudson George is a home away from home. Open for Breakfast, Lunch Daily, and Dinner Thursday, Friday and Saturday.'
+        secondPara='Hungry Baker is a home away from home. Open for Breakfast, Lunch Monday to Friday.'
         third='We look forward to welcoming you and your family and friends soon!'
       />
 
       <ImageText
         heading='EVENTS'
         image='https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/470185357_1349871159758319_3884551672326250717_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=q0dJ1o-voMoQ7kNvwFtZ3Hl&_nc_oc=AdkSzwZK9pMcHeXvyzGySGcSzKzfStlGLR11mnXSoaaKxQ-hYuFoHSVshuoh-vdvXD55hYpsBGMI0d_O9wPaWnvW&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=rI8m56ud9lSiX233vK16jg&oh=00_AfLtJagLJK4NTFFBRUxmhMt-VDjA5LEsgUu2aPHmPtkDaA&oe=68326519'
-        para='When the occasion arises, experience wholesome Mediterranean-inspired lunches and dinners together with a carefully selected collection of wine, beer and cider. Here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed indoor alfresco area we able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
+        para='When the occasion arises, experience wholesome Mediterranean-inspired Breakfast and Lunch together with a carefully selected collection of Coffees and Smoothies and Juices. Here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed indoor alfresco area we able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
         secondPara='Speak to one of the team next time your in and we would love to discuss your event.'
       />
 
@@ -49,7 +50,7 @@ const Home = () => {
         // imageWrapper='min-h-[500px]'
         reverse={true}
         heading='CATERING'
-        image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_catering.jpg'
+        image='https://media.licdn.com/dms/image/v2/D4D12AQGCfNd46fzsJw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1658750246612?e=2147483647&v=beta&t=nJr6jTcqirUruQaLPwXU3crVbOhYQt1-fM_Pch97VW4'
         para='When you have a Work Meeting, Get together or just Stuck in the office? That’s ok, we offer corporate catering in the Hills delivered to your door! We have a variety of menus or we can tailor something to you your requirements. Speak to one of the team next time your in or simply send us an email.'
       />
 
@@ -310,18 +311,18 @@ const Home = () => {
       </section> */}
 
       <div className='max-w-7xl mx-auto px-4 md:px-10 py-20'>
-            <h3 className="text-3xl mb-5 text-orange-600 font-serif font-semibold">FAQ’s</h3>
+        <h3 className="text-3xl mb-5 text-orange-600 font-serif font-semibold">FAQ’s</h3>
         <Accordion>
           <AccordionSummary
             // expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">How can I make a booking at your restaura</h3>
+            <h3 className="text-xl text-black font-serif font-semibold">How can I make a booking at your restaurant</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
-              Head to our website to open a booking at Hudson George, one of the leading Castle Hill restaurants. Select a date and time to book a table for up to 8 guests. For bookings of 10 or more people, enter the number in the box corresponding to the ‘request for a group’ section. You can call us at (02) 9194 3288 to make your request, and we will do our best to accommodate your request in line with the Government restrictions and regulations.
+              Head to our website to open a booking at Hungry Baker, one of the leading Castle Hill restaurants. Select a date and time to book a table for up to 8 guests. For bookings of 10 or more people, enter the number in the box corresponding to the ‘request for a group’ section. You can call us at 0298327770 to make your request, and we will do our best to accommodate your request in line with the Government restrictions and regulations.
             </p>
           </AccordionDetails>
         </Accordion>
@@ -332,12 +333,12 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">Can I book Hudson George for a private event?</h3>
+            <h3 className="text-xl text-black font-serif font-semibold">Can I book Hungry Baker for a private event?</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
-              Yes! Hudson George, one of the best
-              , also cater for group celebrations and private events. We feature Mediterranean-inspired lunches and dinners together with a carefully selected collection of wine, beer and cider. Our relaxed alfresco area provides the perfect space for your next event including, birthdays, graduation parties, and more. You can relax and unwind with your group in a casual setting. Call (02) 9194 3288 to book your space.
+              Yes! Hungry Baker, one of the best
+              , also cater for group celebrations and private events. We feature Mediterranean-inspired lunches together with a carefully selected collection of coffee, smoothies and juices. Our relaxed alfresco area provides the perfect space for your next event including, birthdays, graduation parties, and more. You can relax and unwind with your group in a casual setting. Call 0298327770 to book your space.
             </p>
           </AccordionDetails>
         </Accordion>
@@ -352,7 +353,7 @@ const Home = () => {
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
-              Yes! Do you have a work meeting or get together? Stuck in the office? We have got you covered! Hudson George, one of the
+              Yes! Do you have a work meeting or get together? Stuck in the office? We have got you covered! Hungry Baker, one of the
               , offer corporate catering in the Hills delivered to your door. Our delicious menu option includes a variety of food options that can be tailored to meet your requirements. Delivery available!
             </p>
           </AccordionDetails>
@@ -370,7 +371,7 @@ const Home = () => {
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
               Five Senses coffee at our
-              is made with the purpose to impact people positively through coffee. At Hudson George, we believe that delicious coffee has an incredible ability to connect people, relationships that make the world just that little bit better. Call (02) 9194 3288 for more details.
+              is made with the purpose to impact people positively through coffee. At Hungry Baker, we believe that delicious coffee has an incredible ability to connect people, relationships that make the world just that little bit better. Call 0298327770 for more details.
             </p>
           </AccordionDetails>
         </Accordion>
@@ -385,8 +386,8 @@ const Home = () => {
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
-              Hudson George, a top-rated
-              , is the perfect place for coffee addicts and aficionados. At Hudson George, you are welcomed by the rich aromas of Five Senses coffee and daily fresh treats. We serve you a classic Australian breakfast alongside remarkable coffee. We are open for breakfast and lunch daily on Thursday, Friday, and Saturday. Call (02) 9194 3288 to find out more.
+              Hungry Baker, a top-rated
+              , is the perfect place for coffee addicts and aficionados. At Hungry Baker, you are welcomed by the rich aromas of Five Senses coffee and daily fresh treats. We serve you a classic Australian breakfast alongside remarkable coffee. We are open for breakfast and lunch daily on Monday to Friday. Call  0298327770 to find out more.
             </p>
           </AccordionDetails>
         </Accordion>

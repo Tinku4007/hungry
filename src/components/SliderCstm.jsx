@@ -43,7 +43,7 @@ const SliderCstm = ({ item }) => {
               <img
                 src={item}
                 alt={`slide-${index}`}
-                className="h-full w-full object-cover rounded-lg shadow-md mb-4"
+                className="h-[350px] w-full object-cover rounded-lg shadow-md mb-4"
               />
             </div>
           </SwiperSlide>

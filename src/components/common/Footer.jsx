@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -7,11 +8,11 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo and Description */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              HUDSON GEORGE
-            </h2>
+            <Link to='/' className="text-2xl font-semibold mb-4 flex items-center gap-2">
+              HUNGRY BAKER
+            </Link>
             <p className="text-gray-300 mb-4">
-              Hudson George is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.
+             Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate seating for breakfast & lunch Monday to Friday.
             </p>
             <div className="flex space-x-3">
               {/* <FaFacebookF className="bg-gray-800 p-2 rounded-full text-xl" />
@@ -34,8 +35,9 @@ const Footer = () => {
           {/* Address */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Our Address</h3>
-            <p>Home Co Hills – Hudson Ave entrance
-              56/16 Victoria Ave, Castle Hill NSW 2154</p>
+            <p>Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK</p>
+            <p>hungrybaker2@optusnet.com.au</p>
+            <p>0298327770</p>
             {/* <div className="text-gray-300 space-y-4">
             <p className="flex items-start gap-3"><FiMapPin className="text-orange-600 mt-1" /> 301 The Greenhouse London, E2 8DY UK</p>
             <p className="flex items-start gap-3"><FiMail className="text-orange-600 mt-1" /> support@domain.com<br />info@domain.com</p>
@@ -64,7 +66,7 @@ const Footer = () => {
             <a href="#">Faq’s</a>
             <a href="#">Get a Quote</a>
           </div>
-          <p>© 2023 HUDSON GEORGE</p>
+          <p>© 2023 Hungry Baker</p>
         </div>
       </footer>
     </>

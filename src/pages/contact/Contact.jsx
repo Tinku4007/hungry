@@ -38,15 +38,13 @@ const Contact = () => {
           {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           <div className="space-y-4 text-sm">
             <div>
-              <strong>Phone:</strong> +01 5555 6565 6565
+              <strong>Phone:</strong> 0298327770
             </div>
             <div>
-              <strong>Email:</strong> info@hudsongeorge.com.au
+              <strong>Email:</strong> hungrybaker2@optusnet.com.au 
             </div>
             <div>
-              <strong>Address:</strong><br />Home Co Hills – South Side
-Hudson Ave entrance
-56/16 Victoria Ave, Castle Hill NSW 2154
+              <strong>Address:</strong><br />Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK
             </div>
             <div className="flex space-x-4 mt-4">
               <a href="#">🔵</a>

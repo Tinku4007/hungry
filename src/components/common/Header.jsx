@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logo from "../../assets/images/logo.png";
+
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpne] = useState(false)
@@ -15,14 +17,14 @@ const Header = () => {
   return (
     <>
       <div className="bg-black text-white text-xs px-4 py-1 flex justify-between items-center">
-        <div>📍 56/16 Victoria Ave, Castle Hill, Sydney, NSW, Australia, 2154</div>
-        <div>info@hudsongeorge.com.au | +61 2 9194 3288</div>
+        <div>📍 Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK</div>
+        <div>hungrybaker2@optusnet.com.au | 0298327770</div>
       </div>
 
       {/* Navbar */}
-      <nav className="flex justify-between items-center py-5 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
+      <nav className="flex justify-between items-center py-3 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
         <div className="text-2xl font-bold text-orange-600">
-          HUDSON GEORGE
+          <img className='w-[80px] h-[80px]' src={logo} alt="logo" />
           {/* <Link to='/'><img className='absolute h-[150px] top-20' src='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/logo.png' alt="" /></Link> */}
         </div>
         <ul className="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
