@@ -30,18 +30,28 @@ const Event = () => {
                                 <input className="border p-2 rounded" placeholder="Your Name" />
                                 <input className="border p-2 rounded" placeholder="Email Address" />
                             </div>
-                            <input className="border p-2 rounded" placeholder="Subject" />
                             <div className="grid grid-cols-2 gap-4">
-                                <input className="border p-2 rounded" placeholder="Company (optional)" />
-                                <input className="border p-2 rounded" placeholder="Phone (optional)" />
+                                <input className="border p-2 rounded" placeholder="Phone Number" />
+                                <input className="border p-2 rounded" placeholder="Number Of People" />
+                            </div>
+                            <div className="w-full">
+                                <select name="" id="" className='w-full outline-none border p-2 rounded'>
+                                    <option value="">Seating</option>
+                                    <option value="">Breakfast</option>
+                                    <option value="">Lunch</option>
+                                </select>
+                            </div>
+                            <div className='grid grid-cols-2 gap-4'>
+                                <input type='date' className="border p-2 rounded" placeholder="Subject" />
+                                <input type='time' className="border p-2 rounded" placeholder="Subject" />
                             </div>
                             <textarea className="border p-2 rounded" placeholder="Message" rows="4"></textarea>
                             <button className="bg-orange-600 text-white py-2 rounded">Get Started</button>
                         </form>
                     </div>
                     <div className='relative'>
-                        <img src='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_2.png' alt="" />
-                        <img className='absolute -top-12 h-[750px]' src={'https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_3.png'} alt="" />
+                        <img src='https://img.freepik.com/free-photo/smiling-woman-headset-presentation-something_329181-11710.jpg?t=st=1748020830~exp=1748024430~hmac=bcb7b877a09c431f7045923244a744e8e7d67cfdba94fa52352400e22fa970ae&w=1380' alt="" />
+                        {/* <img className='absolute -top-12 h-[750px]' src={'https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_3.png'} alt="" /> */}
                     </div>
                 </div>
             </section>

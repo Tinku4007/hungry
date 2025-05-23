@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   return (
@@ -12,7 +14,7 @@ const Footer = () => {
               HUNGRY BAKER
             </Link>
             <p className="text-gray-300 mb-4">
-             Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate seating for breakfast & lunch Monday to Friday.
+              Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate seating for breakfast & lunch Monday to Friday.
             </p>
             <div className="flex space-x-3">
               {/* <FaFacebookF className="bg-gray-800 p-2 rounded-full text-xl" />
@@ -56,6 +58,32 @@ const Footer = () => {
             <button className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">
               Get Started
             </button>
+            <div className='pt-3 flex items-center gap-2'>
+              <Link to='https://www.facebook.com/thehungrybakerEK' target='_blank'>
+                <FacebookOutlinedIcon sx={{
+                  width: "40px",
+                  height: "40px",
+                  cursor: "pointer",
+                  transition: "transform 0.3s, color 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    color: "#1877f2", // Facebook blue
+                  },
+                }} />
+              </Link>
+              <Link to='https://www.instagram.com/hungry.bakereastencreek' target='_blank'>
+                <InstagramIcon sx={{
+                  width: "40px",
+                  height: "40px",
+                  cursor: "pointer",
+                  transition: "transform 0.3s, color 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    color: "#e1306c", // Instagram pink
+                  },
+                }} />
+              </Link>
+            </div>
           </div>
         </div>
 

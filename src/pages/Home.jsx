@@ -23,6 +23,10 @@ const Home = () => {
 
       {/* Delicious food & exquisite drinks */}
       <ImageText
+        aos='fade-right'
+        offset='300'
+        easing='ease-in-sine'
+
         heading='WELCOME TO HUNGRY BAKER'
         image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_intro.jpg'
         para='Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents of greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'

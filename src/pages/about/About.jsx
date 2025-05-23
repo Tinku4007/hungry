@@ -4,6 +4,33 @@ import ImageText from '../../components/common/ImageText'
 import SliderCstm from '../../components/SliderCstm'
 
 const About = () => {
+
+    const review = [
+        {
+            src: "https://lh3.googleusercontent.com/a-/ALV-UjUyz09Y4dgOh8sZ4Xhp0SyGrhtL1eZYfUrRkRphXiTXEOiiJptiEg=w54-h54-p-rp-mo-ba4-br100",
+            name: "Alexander Little",
+            rating: "⭐⭐⭐⭐⭐",
+            description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
+        },
+        {
+            src: "https://lh3.googleusercontent.com/a-/ALV-UjVvlQAPR4drXJkhgcwLyu5gRvHlBkdwJHRXq-ybupTs1ujhmFm3=w54-h54-p-rp-mo-ba3-br100",
+            name: "Sanjeshni Lata",
+            rating: "⭐⭐⭐⭐⭐",
+            description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
+        },
+        {
+            src: "https://lh3.googleusercontent.com/a-/ALV-UjVIB7O1z0dW2r-E2dC2s8wML47Jy2e-HGKBBUaypVAXSscoKiA=w54-h54-p-rp-mo-ba5-br100",
+            name: "Chris Dow",
+            rating: "⭐⭐⭐⭐⭐",
+            description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
+        },
+        {
+            src: "https://lh3.googleusercontent.com/a-/ALV-UjWeh3bLk7pFb8YdHW4o6WOzIYYdqxKCyAxy1VoED1y5YDHBuJ9E=w54-h54-p-rp-mo-ba5-br100",
+            name: "Bill",
+            rating: "⭐⭐⭐⭐⭐",
+            description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
+        },
+    ]
     return (
         <div className="w-full text-gray-800">
             {/* Hero Section */}
@@ -73,7 +100,7 @@ const About = () => {
             <section className="py-16 px-4 md:px-16">
                 <h3 className="text-center text-orange-500 text-sm font-semibold">Our Specials</h3>
                 <h2 className="text-center text-3xl font-bold mb-10">A Taste You’ll Never Forget</h2>
-                <SliderCstm item={['https://media.istockphoto.com/id/867378776/photo/chef-is-working-in-an-italian-restaurant.jpg?s=612x612&w=0&k=20&c=a-MG3kO4wXiuc7jPcF2u31grt6y_hwwM11Ye4pgE2is=','https://media.istockphoto.com/id/530625117/photo/traditional-hungarian-xmas-rolls-bejgli.jpg?s=612x612&w=0&k=20&c=PQK8Jmd5k7vZN8sZKDPH0OQrkr6N2lyTbRT_fjuG9UY=',
+                <SliderCstm images={true} item={['https://media.istockphoto.com/id/867378776/photo/chef-is-working-in-an-italian-restaurant.jpg?s=612x612&w=0&k=20&c=a-MG3kO4wXiuc7jPcF2u31grt6y_hwwM11Ye4pgE2is=', 'https://media.istockphoto.com/id/530625117/photo/traditional-hungarian-xmas-rolls-bejgli.jpg?s=612x612&w=0&k=20&c=PQK8Jmd5k7vZN8sZKDPH0OQrkr6N2lyTbRT_fjuG9UY=',
                     'https://scontent.fixc4-2.fna.fbcdn.net/v/t39.30808-6/487206015_1254290099810017_4456269061556823549_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RN8CFIQtc_EQ7kNvwEtogEy&_nc_oc=Adni03V7BqKe8HKKcgb63LjiExrv0jvZ2kYCelHdgfE0hxAeCqEStUATSrD6zJ5q9TpbUAA1wMPlUsvKcC9LiUxq&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=XEUdn6F_VCOYtFLFzwwsig&oh=00_AfKNxWW503ClllwlIi-0ZQ8LV-cp7Ki_r0SRrZzMKcxkcw&oe=683270A9',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486639365_1253632353209125_8298364058678702170_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=68UhGyvo3BQQ7kNvwHPeNjt&_nc_oc=AdmI-gYCHXoDUerHz1VkW0_y1xom7NH2noQfvLlQlzEVlqnPilcwsUe4Y4DhBR0qYgZXeY1nzgr1Hdy2zaXA0QNk&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=amTGSVgP5ODUq-m4bJxQMA&oh=00_AfLWuYjGCiSecduUpP6Y4S1hlyb3GvNbg44p32eJ-C5KZw&oe=6832771E',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486679754_1252974476608246_979976901725611562_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vdI6nGE4pDcQ7kNvwFpHwfc&_nc_oc=AdmKFucCYiNAWsjC0bh4a-B7-U_k1RTf1Vm1Ub6VLokCDvlcc4f6Rw1bZzHxPPPYBpHwyvwhD39x_D9ckoe6aMzB&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=qJXWEdPxjaji9c4_Lvzc0Q&oh=00_AfK_2jII8DrxY2WG6okgK5wtWVysdrT0qMv4K62Nc5oM8g&oe=68327C8A'
@@ -99,52 +126,7 @@ const About = () => {
             {/* Testimonials */}
             <section className="py-16 px-4 md:px-16 text-center">
                 <h2 className="text-3xl font-bold mb-8">Happy Customer</h2>
-                <div className="grid grid-cols-1 content-center  md:grid-cols-3 gap-6">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        {/* <p className="mb-2">Awesome Experience.</p> */}
-                        <div className='text-center flex justify-center mb-2'>
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyz09Y4dgOh8sZ4Xhp0SyGrhtL1eZYfUrRkRphXiTXEOiiJptiEg=w54-h54-p-rp-mo-ba4-br100" alt="" />
-                        </div>
-                        <h4 className="font-semibold mb-3">Alexander Little</h4>
-                        <div className="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
-                        <p className="text-sm text-gray-600 mb-4">
-                            Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯
-                        </p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        {/* <p className="mb-2">Awesome Experience.</p> */}
-                        <div className='flex justify-center mb-2'>
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVvlQAPR4drXJkhgcwLyu5gRvHlBkdwJHRXq-ybupTs1ujhmFm3=w54-h54-p-rp-mo-ba3-br100" alt="" />
-                        </div>
-                        <h4 className="font-semibold mb-3">Sanjeshni Lata</h4>
-                        <div className="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
-                        <p className="text-sm text-gray-600 mb-4">
-                            Just love this place. Awesome coffee, friendly atmosphere and lovely people.
-                        </p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        <div className='flex justify-center mb-2'>
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVIB7O1z0dW2r-E2dC2s8wML47Jy2e-HGKBBUaypVAXSscoKiA=w54-h54-p-rp-mo-ba5-br100" alt="" />
-                        </div>
-                        {/* <p className="mb-2">Awesome Experience.</p> */}
-                        <h4 className="font-semibold mb-3">Chris Dow</h4>
-                        <div className="flex justify-center mb-2">⭐⭐⭐⭐</div>
-                        <p className="text-sm text-gray-600 mb-4">
-                            This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!
-                        </p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        {/* <p className="mb-2">Awesome Experience.</p> */}
-                        <div className='flex justify-center mb-2'>
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWeh3bLk7pFb8YdHW4o6WOzIYYdqxKCyAxy1VoED1y5YDHBuJ9E=w54-h54-p-rp-mo-ba5-br100" alt="" />
-                        </div>
-                        <h4 className="font-semibold mb-3">Bill</h4>
-                        <div className="flex justify-center mb-2">⭐⭐⭐⭐</div>
-                        <p className="text-sm text-gray-600 mb-4">
-                            Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!
-                        </p>
-                    </div>
-                </div>
+                <SliderCstm item={review} />
             </section >
 
             {/* Call to Action Section */}

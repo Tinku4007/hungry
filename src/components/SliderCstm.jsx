@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const SliderCstm = ({ item }) => {
+const SliderCstm = ({ item, images }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -30,13 +30,13 @@ const SliderCstm = ({ item }) => {
           slidesPerView: 3,
         },
         1280: {
-          slidesPerView: 4,
+          slidesPerView: 3,
         },
       }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      {
+      {images &&
         item?.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="w-full overflow-hidden">
@@ -48,6 +48,26 @@ const SliderCstm = ({ item }) => {
             </div>
           </SwiperSlide>
         ))
+      }
+
+      {!images &&
+        item?.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                {/* <p className="mb-2">Awesome Experience.</p> */}
+                <div className='text-center flex justify-center mb-2'>
+                  <img src={item?.src} alt="src" />
+                </div>
+                <h4 className="font-semibold mb-3">{item?.name}</h4>
+                <div className="flex justify-center mb-2">{item?.rating}</div>
+                <p className="text-sm text-gray-600 mb-4">
+                  {item?.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          )
+        })
       }
     </Swiper>
   );

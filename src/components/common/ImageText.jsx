@@ -1,13 +1,18 @@
 import React from 'react';
 
-const ImageText = ({ imageWrapper, image, para, heading, secondPara, reverse = false, third }) => {
-    console.log(imageWrapper)
+const ImageText = ({
+     aos = 'fade-right',           // animation type
+  offset = '200',               // offset
+  easing = 'ease-in-sine' ,
+    animation, imageWrapper, image, para, heading, secondPara, reverse = false, third }) => {
     return (
         <>
             <section>
                 <div className="max-w-7xl mx-auto px-4 md:px-10 my-16 grid md:grid-cols-2 gap-10">
                     {/* Image */}
-                    <div className={`flex flex-col ${imageWrapper} space-y-6 ${reverse ? 'md:order-2' : 'md:order-1'}`}>
+                    <div data-aos={aos}
+                        data-aos-offset={offset}
+                        data-aos-easing={easing} className={`flex flex-col ${imageWrapper} space-y-6 ${reverse ? 'md:order-2' : 'md:order-1'}`}>
                         <img src={image} alt="Food" className="rounded-lg h-full shadow-lg object-cover w-full" />
                     </div>
 
