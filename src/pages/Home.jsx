@@ -11,11 +11,15 @@ const Home = () => {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-[80vh]"
-        style={{ backgroundImage: `url(${her_sec})` }}
+        style={{
+          backgroundAttachment:"fixed",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://www.hungrybakers.com.au/wp-content/uploads/2021/04/a4c275febb5fd2fd331315e8c7780ca5_-new-south-wales-blacktown-city-council-eastern-creek-hungry-bakerhtml-e1626272125646.jpeg')`,
+        }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl leading-snug">
-            WELCOME
+          <h1 className="text-white mb-10 text-8xl md:text-7xl font-semibold max-w-3xl leading-snug">
+            Welcome to<br />
+            Hungary Baker
           </h1>
           <TheameButton title='ORDER ONLINE' />
         </div>

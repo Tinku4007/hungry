@@ -1,9 +1,62 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import DeliciousExperiences from '../../components/common/DeliciousExperiences'
 import ImageText from '../../components/common/ImageText'
 import SliderCstm from '../../components/SliderCstm'
 
+const stats = [
+    { label: 'Visitors daily', value: '200 +' },
+    { label: 'Deliveries monthly', value: '400 +' },
+    { label: 'Positive feedback', value: '100%' },
+    { label: 'Awards and honors', value: '40 +' },
+];
+
+
 const About = () => {
+    const sectionRef = useRef(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const [counters, setCounters] = useState(stats.map(() => 0));
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    animateCounters();
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) observer.unobserve(sectionRef.current);
+        };
+    }, [hasAnimated]);
+
+    const animateCounters = () => {
+        stats.forEach((stat, i) => {
+            const numericValue = parseInt(stat.value); // Extract numeric part
+            let start = 0;
+            const duration = 2000; // 1.5 seconds
+            const increment = Math.ceil(numericValue / (duration / 16));
+
+            const interval = setInterval(() => {
+                start += increment;
+                if (start >= numericValue) {
+                    start = numericValue;
+                    clearInterval(interval);
+                }
+                setCounters(prev => {
+                    const updated = [...prev];
+                    updated[i] = start;
+                    return updated;
+                });
+            }, 16); // ~60fps
+        });
+    };
 
     const review = [
         {
@@ -67,19 +120,24 @@ const About = () => {
 
 
             {/* Accomplishments */}
-            <section className="py-[150px] bg-cover bg-center bg-fixed text-white relative" style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}>
+            <section
+                ref={sectionRef}
+                className="py-[150px] bg-cover bg-center bg-fixed text-white relative"
+                style={{
+                    backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')",
+                }}
+            >
                 <div className="bg-black bg-opacity-60 absolute top-0 left-0 w-full h-full"></div>
+
                 <div className="relative z-10 text-center">
                     <h2 className="text-3xl font-bold mb-8">Our accomplishments</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center px-4">
-                        {[
-                            { label: 'Clients', value: 32 },
-                            { label: 'Experience', value: 11 },
-                            { label: 'Daily', value: 384 },
-                            { label: 'Awards', value: 10 },
-                        ].map((item, index) => (
-                            <div key={index} className="bg-white text-black p-6 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-bold">{item.value}</h3>
+                        {stats.map((item, i) => (
+                            <div key={i} className="bg-white text-black p-6 rounded-lg shadow-md">
+                                <h3 className="text-2xl lg:text-4xl font-bold">
+                                    {counters[i]}
+                                    {stats[i].value.replace(/[0-9]/g, '')}
+                                </h3>
                                 <p>{item.label}</p>
                             </div>
                         ))}

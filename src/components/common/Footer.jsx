@@ -38,7 +38,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Our Address</h3>
             <p>Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK</p>
-            <p>hungrybaker2@optusnet.com.au</p>
+            <p>hungrybaker.catering@gmail.com </p>
             <p>0298327770</p>
             {/* <div className="text-gray-300 space-y-4">
             <p className="flex items-start gap-3"><FiMapPin className="text-orange-600 mt-1" /> 301 The Greenhouse London, E2 8DY UK</p>

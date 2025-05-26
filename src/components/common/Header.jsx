@@ -18,7 +18,7 @@ const Header = () => {
     <>
       <div className="bg-black text-white text-xs px-4 py-1 flex justify-between items-center">
         <div>📍 Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK</div>
-        <div>hungrybaker2@optusnet.com.au | 0298327770</div>
+        <div>hungrybaker.catering@gmail.com | 0298327770</div>
       </div>
 
       {/* Navbar */}
@@ -32,7 +32,7 @@ const Header = () => {
           <li><Link to='/event' className="hover:text-orange-600 transition">Event</Link></li>
           <li><Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Menu</Link></li>
           <li><Link to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Catering</Link></li>
-          <li><Link to="#" className="hover:text-orange-600 transition">Gallery</Link></li>
+          <li><Link to="/gallery" className="hover:text-orange-600 transition">Gallery</Link></li>
           {/* <li><a href="#" className="hover:text-orange-600 transition">Our History</a></li> */}
           {/* <li><Link  className="hover:text-orange-600 transition">Blog</Link></li> */}
           <li><Link to='/contact'  className="hover:text-orange-600 transition">Contact</Link></li>

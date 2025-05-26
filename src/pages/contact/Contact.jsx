@@ -41,7 +41,7 @@ const Contact = () => {
               <strong>Phone:</strong> 0298327770
             </div>
             <div>
-              <strong>Email:</strong> hungrybaker2@optusnet.com.au 
+              <strong>Email:</strong> hungrybaker.catering@gmail.com  
             </div>
             <div>
               <strong>Address:</strong><br />Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK

@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 import Event from "../pages/event/Event";
+import Gallery from "../pages/gallery/Gallery";
 
 export const route = createBrowserRouter(
     [
@@ -25,6 +26,11 @@ export const route = createBrowserRouter(
                     index: true,
                     path: "/contact",
                     element: <Contact />
+                },
+                {
+                    index: true,
+                    path: "/gallery",
+                    element: <Gallery />
                 },
                 {
                     index: true,
