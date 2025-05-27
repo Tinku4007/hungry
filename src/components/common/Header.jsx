@@ -24,7 +24,7 @@ const Header = () => {
       {/* Navbar */}
       <nav className="flex justify-between items-center py-3 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
         <div className="text-2xl font-bold text-orange-600">
-         <Link to='/'><img className='w-[80px] h-[80px]' src={logo} alt="logo" /></Link>
+         <Link to='/'><img className='w-[150px] ]' src={logo} alt="logo" /></Link>
         </div>
         <ul className="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
           <li><Link href="/" className="hover:text-orange-600 transition">Home</Link></li>

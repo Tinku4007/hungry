@@ -18,8 +18,7 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-white mb-10 text-8xl md:text-7xl font-semibold max-w-3xl leading-snug">
-            Welcome to<br />
-            Hungary Baker
+            Welcome
           </h1>
           <TheameButton title='ORDER ONLINE' />
         </div>
