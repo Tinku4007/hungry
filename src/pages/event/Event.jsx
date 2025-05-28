@@ -1,7 +1,31 @@
 import React from 'react'
 import ImageText from '../../components/common/ImageText'
+import InputField from '../../components/common/InputField'
+import { Form, Formik } from 'formik'
 
 const Event = () => {
+
+ const handleSubmit = async (values, { resetForm }) => {
+  try {
+    const res = await fetch('http://localhost:5000/send-enquiry', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    });
+
+    if (res.ok) {
+      alert("Enquiry sent successfully!");
+      resetForm();
+    } else {
+      alert("Failed to send enquiry. Try again.");
+    }
+  } catch (err) {
+    console.error("Error submitting enquiry:", err);
+    alert("Something went wrong.");
+  }
+};
     return (
         <>
             <div className="relative h-80 bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style={{ backgroundImage: `url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg')` }}>
@@ -25,29 +49,45 @@ const Event = () => {
                     <div className="bg-gray-50 p-8 rounded shadow">
                         <h3 className="text-xl font-semibold mb-2">ENQUIRE</h3>
                         {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-                        <form className="grid gap-4">
-                            <div className="grid grid-cols-2 gap-4">
-                                <input className="border p-2 rounded" placeholder="Your Name" />
-                                <input className="border p-2 rounded" placeholder="Email Address" />
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
-                                <input className="border p-2 rounded" placeholder="Phone Number" />
-                                <input className="border p-2 rounded" placeholder="Number Of People" />
-                            </div>
-                            <div className="w-full">
-                                <select name="" id="" className='w-full outline-none border p-2 rounded'>
-                                    <option value="">Seating</option>
-                                    <option value="">Breakfast</option>
-                                    <option value="">Lunch</option>
-                                </select>
-                            </div>
-                            <div className='grid grid-cols-2 gap-4'>
-                                <input type='date' className="border p-2 rounded" placeholder="Subject" />
-                                <input type='time' className="border p-2 rounded" placeholder="Subject" />
-                            </div>
-                            <textarea className="border p-2 rounded" placeholder="Message" rows="4"></textarea>
-                            <button className="bg-orange-600 text-white py-2 rounded">Get Started</button>
-                        </form>
+                        {/* <form className="grid gap-4"> */}
+                        <Formik
+                            initialValues={{
+                                name: '',
+                                email: '',
+                                phone_number: '',
+                                number_people: "",
+                                seating: '',
+                                date:'',
+                                time:'',
+                                message:''
+                            }}
+                            onSubmit={handleSubmit}
+                        >
+                            <Form className='grid gap-4'>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <InputField name='name' placeholder='Your Name' />
+                                    <InputField name='email' placeholder='Email Address' />
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <InputField name='phone_number' type='number' placeholder='Phone Number' />
+                                    <InputField name='number_people' placeholder='Number Of People' />
+                                </div>
+                                <div className="w-full">
+                                    <InputField className='w-full' as='select' name='seating' placeholder='seating' >
+                                        <option value="seating">Seating</option>
+                                        <option value="breakfast">BreakFast</option>
+                                        <option value="lunch">Lunch</option>
+                                    </InputField>
+                                </div>
+                                <div className='grid grid-cols-2 gap-4'>
+                                    <InputField name='date' type='date' />
+                                    <InputField name='time' type='time' />
+                                </div>
+                                <InputField as='textarea' rows={4} name='message' placeholder='Message' />
+                                <button type='submit' className="bg-orange-600 text-white py-2 rounded">Get Started</button>
+                            </Form>
+                        </Formik>
+                        {/* </form> */}
                     </div>
                     <div className='relative'>
                         <img src='https://img.freepik.com/free-photo/smiling-woman-headset-presentation-something_329181-11710.jpg?t=st=1748020830~exp=1748024430~hmac=bcb7b877a09c431f7045923244a744e8e7d67cfdba94fa52352400e22fa970ae&w=1380' alt="" />
