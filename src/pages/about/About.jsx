@@ -134,15 +134,15 @@ const About = () => {
                 <div className="bg-black bg-opacity-60 absolute top-0 left-0 w-full h-full"></div>
 
                 <div className="relative z-10 text-center">
-                    <h2 className="text-3xl font-bold mb-8">Our accomplishments</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center px-4">
+                    <h2 data-aos="fade-down" className="text-3xl font-bold mb-10">Our accomplishments</h2>
+                    <div  data-aos="zoom-in-up" className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center px-4">
                         {stats.map((item, i) => (
                             <div key={i} className="bg-white text-black p-6 rounded-lg shadow-md">
-                                <h3 className="text-2xl lg:text-4xl font-bold">
+                                <h3 className="text-2xl lg:text-6xl font-bold">
                                     {counters[i]}
                                     {stats[i].value.replace(/[0-9]/g, '')}
                                 </h3>
-                                <p>{item.label}</p>
+                                <p className='pt-4'>{item.label}</p>
                             </div>
                         ))}
                     </div>
