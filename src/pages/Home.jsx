@@ -5,6 +5,7 @@ import ImageText from '../components/common/ImageText'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import her_sec from "../assets/images/WhatsApp Image 2025-05-22 at 22.28.32_efff7f22.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import home_img from '../assets/images/home_1.jpeg'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -31,11 +32,11 @@ const Home = () => {
             className="relative bg-cover bg-center h-[80vh]"
             style={{
               // backgroundAttachment: "fixed",
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://www.hungrybakers.com.au/wp-content/uploads/2021/04/a4c275febb5fd2fd331315e8c7780ca5_-new-south-wales-blacktown-city-council-eastern-creek-hungry-bakerhtml-e1626272125646.jpeg')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${home_img})`,
             }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1  data-aos="zoom-in-up" className="text-white mb-10  sm:text-2xl md:text-7xl font-semibold max-w-3xl leading-snug">
+              <h1  data-aos="zoom-in-up" className="text-white mb-10  sm:text-4xl md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
               <TheameButton title='ORDER ONLINE' />
@@ -51,7 +52,7 @@ const Home = () => {
             }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1 className="text-white mb-10   sm:text-2xl md:text-7xl font-semibold max-w-3xl leading-snug">
+              <h1 className="text-white mb-10   sm:text-4xl md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
               <TheameButton title='ORDER ONLINE' />
