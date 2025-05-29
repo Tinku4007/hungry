@@ -110,6 +110,10 @@ const About = () => {
             </section> */}
 
             <ImageText
+                aos="fade-left"
+                anchor="#example-anchor"
+                offset="500"
+                duration="500"
                 // imageWrapper='min-h-[500px]'
                 reverse={true}
                 heading='ABOUT US'
@@ -146,6 +150,10 @@ const About = () => {
             </section>
             <div>
                 <ImageText
+                    aos="fade-right"
+                    offset="500"
+                    easing="ease-in-sine"
+                    duration="500"
                     // imageWrapper='min-h-[500px]'
                     heading='OUR COFFEE'
                     image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/about_img4.jpg'

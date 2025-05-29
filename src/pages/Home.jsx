@@ -4,31 +4,70 @@ import DeliciousExperiences from '../components/common/DeliciousExperiences'
 import ImageText from '../components/common/ImageText'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import her_sec from "../assets/images/WhatsApp Image 2025-05-22 at 22.28.32_efff7f22.jpg"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Home = () => {
   return (
     <div className="font-serif text-gray-900">
-      {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[80vh]"
-        style={{
-          backgroundAttachment:"fixed",
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://www.hungrybakers.com.au/wp-content/uploads/2021/04/a4c275febb5fd2fd331315e8c7780ca5_-new-south-wales-blacktown-city-council-eastern-creek-hungry-bakerhtml-e1626272125646.jpeg')`,
-        }}
+      <Swiper
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        // spaceBetween={20}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        speed={3500}
+        loop={true}
+        className='w-full h-full'
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white mb-10 text-8xl md:text-7xl font-semibold max-w-3xl leading-snug">
-            Welcome
-          </h1>
-          <TheameButton title='ORDER ONLINE' />
-        </div>
-      </section>
+        <SwiperSlide>
+          <section
+            className="relative bg-cover bg-center h-[80vh]"
+            style={{
+              // backgroundAttachment: "fixed",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://www.hungrybakers.com.au/wp-content/uploads/2021/04/a4c275febb5fd2fd331315e8c7780ca5_-new-south-wales-blacktown-city-council-eastern-creek-hungry-bakerhtml-e1626272125646.jpeg')`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
+              <h1  data-aos="zoom-in-up" className="text-white mb-10 text-8xl md:text-7xl font-semibold max-w-3xl leading-snug">
+                Welcome
+              </h1>
+              <TheameButton title='ORDER ONLINE' />
+            </div>
+          </section>
+        </SwiperSlide>
+        <SwiperSlide>
+          <section
+            className="relative bg-cover bg-center h-[80vh]"
+            style={{
+              // backgroundAttachment: "fixed",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg')`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
+              <h1 className="text-white mb-10 text-8xl md:text-7xl font-semibold max-w-3xl leading-snug">
+                Welcome
+              </h1>
+              <TheameButton title='ORDER ONLINE' />
+            </div>
+          </section>
+        </SwiperSlide>
+      </Swiper>
+      {/* Hero Section */}
+
 
       {/* Delicious food & exquisite drinks */}
       <ImageText
-        aos='fade-right'
-        offset='300'
-        easing='ease-in-sine'
+        aos="fade-right"
+        offset="500"
+        easing="ease-in-sine"
+        duration="500"
 
         heading='WELCOME TO HUNGRY BAKER'
         image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_intro.jpg'
@@ -37,6 +76,10 @@ const Home = () => {
       />
 
       <ImageText
+        aos="fade-left"
+        anchor="#example-anchor"
+        offset="500"
+        duration="500"
         // imageWrapper='min-h-[500px]'
         reverse={true}
         heading='EATERY'
@@ -47,6 +90,10 @@ const Home = () => {
       />
 
       <ImageText
+        aos="fade-right"
+        offset="500"
+        easing="ease-in-sine"
+        duration="500"
         heading='EVENTS'
         image='https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/470185357_1349871159758319_3884551672326250717_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=q0dJ1o-voMoQ7kNvwFtZ3Hl&_nc_oc=AdkSzwZK9pMcHeXvyzGySGcSzKzfStlGLR11mnXSoaaKxQ-hYuFoHSVshuoh-vdvXD55hYpsBGMI0d_O9wPaWnvW&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=rI8m56ud9lSiX233vK16jg&oh=00_AfLtJagLJK4NTFFBRUxmhMt-VDjA5LEsgUu2aPHmPtkDaA&oe=68326519'
         para='When the occasion arises, experience wholesome Mediterranean-inspired Breakfast and Lunch together with a carefully selected collection of Coffees and Smoothies and Juices. Here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed indoor alfresco area we able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
@@ -54,14 +101,18 @@ const Home = () => {
       />
 
       <ImageText
-        // imageWrapper='min-h-[500px]'
+        aos="fade-left"
+        anchor="#example-anchor"
+        offset="500"
+        duration="500"
+
         reverse={true}
         heading='CATERING'
         image='https://media.licdn.com/dms/image/v2/D4D12AQGCfNd46fzsJw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1658750246612?e=2147483647&v=beta&t=nJr6jTcqirUruQaLPwXU3crVbOhYQt1-fM_Pch97VW4'
         para='When you have a Work Meeting, Get together or just Stuck in the office? That’s ok, we offer corporate catering in the Hills delivered to your door! We have a variety of menus or we can tailor something to you your requirements. Speak to one of the team next time your in or simply send us an email.'
       />
 
-      {/* <section
+      <section
         className="relative bg-cover bg-center py-20"
         style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}
       >
@@ -198,128 +249,73 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 md:px-10 grid md:grid-cols-2 gap-10 items-center py-20">
-        <div>
-          <h2 className="text-3xl font-serif font-semibold mb-6">Immerse yourself in an elegant atmosphere</h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <button className="bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700 transition font-semibold">
-            More About Us
-          </button>
-        </div>
-        <div className="rounded-lg overflow-hidden">
-          <img
-            src="https://pxdraft.com/wrap/hungry/assets/img/home-banner-3.jpg"
-            alt="Elegant atmosphere"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center gap-10 py-20">
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-serif font-semibold mb-6">Our excellent service and top quality dishes are unmatched. Pick the best.</h2>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            Simple and balanced. A seasonal table to enjoy together. Praised and appreciated.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p className="font-signature text-2xl text-orange-600">- Owner Signature</p>
-        </div>
-        <div className="md:w-1/2 grid grid-cols-2 gap-4">
-          <img src="https://pxdraft.com/wrap/hungry/assets/img/about-3.jpg" alt="Service 1" className="rounded-lg object-cover w-full h-48" />
-          <img src="https://pxdraft.com/wrap/hungry/assets/img/about-4.jpg" alt="Service 2" className="rounded-lg object-cover w-full h-48" />
-        </div>
-      </section>
-
-      <section
-        className="relative bg-cover bg-center py-20"
-        style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-4.jpg" }}
-      >
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-        <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid md:grid-cols-2 items-center gap-6">
-          <div>
-            <h2 className="text-3xl font-serif font-semibold mb-4">Our wine selection to complement your meal</h2>
-            <p className="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+      {/* <section
+          className="relative bg-cover bg-center py-20"
+          style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-4.jpg" }}
+        >
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid md:grid-cols-2 items-center gap-6">
+            <div>
+              <h2 className="text-3xl font-serif font-semibold mb-4">Our wine selection to complement your meal</h2>
+              <p className="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div>
+              <ul className="space-y-2 text-right">
+                <li className="flex justify-between">
+                  <span>Cabernet</span>
+                  <span>$120</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Merlot</span>
+                  <span>$120</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Chardonnay</span>
+                  <span>$120</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Pinot noir</span>
+                  <span>$120</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Kenfrancous</span>
+                  <span>$120</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <ul className="space-y-2 text-right">
-              <li className="flex justify-between">
-                <span>Cabernet</span>
-                <span>$120</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Merlot</span>
-                <span>$120</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Chardonnay</span>
-                <span>$120</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Pinot noir</span>
-                <span>$120</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Kenfrancous</span>
-                <span>$120</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section> */}
 
-      <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 text-center">
-        <h2 className="text-3xl font-serif font-semibold mb-12">Happy Customer</h2>
+      {/* <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 text-center">
+          <h2 className="text-3xl font-serif font-semibold mb-12">Happy Customer</h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-6">
-          <div className="bg-pink-100 p-6 rounded-lg max-w-xs mx-auto text-left">
-            <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
-            <p className="text-sm mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div className="font-semibold">Travis Warren</div>
-            <div className="text-xs text-gray-400">New York</div>
+          <div className="flex flex-col md:flex-row justify-center gap-6">
+            <div className="bg-pink-100 p-6 rounded-lg max-w-xs mx-auto text-left">
+              <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
+              <p className="text-sm mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div className="font-semibold">Travis Warren</div>
+              <div className="text-xs text-gray-400">New York</div>
+            </div>
+            <div className="bg-blue-100 p-6 rounded-lg max-w-xs mx-auto text-left">
+              <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
+              <p className="text-sm mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div className="font-semibold">Travis Warren</div>
+              <div className="text-xs text-gray-400">New York</div>
+            </div>
           </div>
-          <div className="bg-blue-100 p-6 rounded-lg max-w-xs mx-auto text-left">
-            <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
-            <p className="text-sm mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div className="font-semibold">Travis Warren</div>
-            <div className="text-xs text-gray-400">New York</div>
-          </div>
-        </div>
-      </section>
+        </section> */}
 
       <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
 
-      <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
-        <h2 className="text-3xl font-serif font-semibold mb-10 text-center">Most Recent News</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {[1, 2, 3, 4].map((item) => (
-            <article key={item} className="border rounded-lg overflow-hidden shadow-sm">
-              <img src={`https://pxdraft.com/wrap/hungry/assets/img/blog-1.jpg`} alt={`News ${item}`} className="w-full h-36 object-cover" />
-              <div className="p-4">
-                <div className="text-xs text-gray-500 mb-2">Food, Drinks</div>
-                <h3 className="font-semibold mb-2">
-                  Restaurants in Paris – get to know them in the city
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button className="text-orange-600 font-semibold mt-3 hover:underline">Read More</button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section> */}
-
       <div className='max-w-7xl mx-auto px-4 md:px-10 py-20'>
         <h3 className="text-3xl mb-5 text-orange-600 font-serif font-semibold">FAQ’s</h3>
-        <Accordion>
+        <Accordion defaultExpanded>
           <AccordionSummary
             // expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"

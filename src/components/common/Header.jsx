@@ -22,7 +22,7 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="flex justify-between items-center py-3 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
+      <nav  data-aos="fade-down" data-aos-once="true" className="flex justify-between items-center py-3 px-6 md:px-20 bg-white shadow-sm sticky top-0 z-50">
         <div className="text-2xl font-bold text-orange-600">
          <Link to='/'><img className='w-[150px] ]' src={logo} alt="logo" /></Link>
         </div>

@@ -1,9 +1,10 @@
 import React from 'react';
 
 const ImageText = ({
-     aos = 'fade-right',           // animation type
-  offset = '200',               // offset
-  easing = 'ease-in-sine' ,
+    aos,         // animation type
+    offset,               // offset
+    easing,
+    duration,
     animation, imageWrapper, image, para, heading, secondPara, reverse = false, third }) => {
     return (
         <>
@@ -12,6 +13,7 @@ const ImageText = ({
                     {/* Image */}
                     <div data-aos={aos}
                         data-aos-offset={offset}
+                        data-aos-duration={duration}
                         data-aos-easing={easing} className={`flex flex-col ${imageWrapper} space-y-6 ${reverse ? 'md:order-2' : 'md:order-1'}`}>
                         <img src={image} alt="Food" className="rounded-lg h-full shadow-lg object-cover w-full" />
                     </div>

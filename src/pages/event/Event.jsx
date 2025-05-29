@@ -5,38 +5,42 @@ import { Form, Formik } from 'formik'
 
 const Event = () => {
 
- const handleSubmit = async (values, { resetForm }) => {
-  try {
-    const res = await fetch('http://localhost:5000/send-enquiry', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
+    const handleSubmit = async (values, { resetForm }) => {
+        try {
+            const res = await fetch('http://localhost:5000/send-enquiry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
 
-    if (res.ok) {
-      alert("Enquiry sent successfully!");
-      resetForm();
-    } else {
-      alert("Failed to send enquiry. Try again.");
-    }
-  } catch (err) {
-    console.error("Error submitting enquiry:", err);
-    alert("Something went wrong.");
-  }
-};
+            if (res.ok) {
+                alert("Enquiry sent successfully!");
+                resetForm();
+            } else {
+                alert("Failed to send enquiry. Try again.");
+            }
+        } catch (err) {
+            console.error("Error submitting enquiry:", err);
+            alert("Something went wrong.");
+        }
+    };
     return (
         <>
             <div className="relative h-80 bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style={{ backgroundImage: `url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg')` }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div className="z-10 text-center">
+                <div data-aos="fade-down" className="z-10 text-center">
                     {/* <p className="text-sm font-light">THE STORY BEHIND</p> */}
                     <h2 className="text-4xl mt-2">Event</h2>
                 </div>
             </div>
 
             <ImageText
+                aos="fade-right"
+                offset="500"
+                easing="ease-in-sine"
+                duration="500"
                 // imageWrapper='min-h-[500px]'
                 heading='EVENT'
                 image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_1.jpg'
@@ -57,9 +61,9 @@ const Event = () => {
                                 phone_number: '',
                                 number_people: "",
                                 seating: '',
-                                date:'',
-                                time:'',
-                                message:''
+                                date: '',
+                                time: '',
+                                message: ''
                             }}
                             onSubmit={handleSubmit}
                         >
@@ -89,7 +93,7 @@ const Event = () => {
                         </Formik>
                         {/* </form> */}
                     </div>
-                    <div className='relative'>
+                    <div data-aos="zoom-in-up" duration="500" offset="500" className='relative'>
                         <img src='https://img.freepik.com/free-photo/smiling-woman-headset-presentation-something_329181-11710.jpg?t=st=1748020830~exp=1748024430~hmac=bcb7b877a09c431f7045923244a744e8e7d67cfdba94fa52352400e22fa970ae&w=1380' alt="" />
                         {/* <img className='absolute -top-12 h-[750px]' src={'https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/events_p_3.png'} alt="" /> */}
                     </div>
