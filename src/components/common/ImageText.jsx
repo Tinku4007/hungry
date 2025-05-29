@@ -20,7 +20,7 @@ const ImageText = ({
 
                     {/* Text */}
                     <div className={`flex flex-col justify-center space-y-6 ${reverse ? 'md:order-1' : 'md:order-2'}`}>
-                        <h3 className="text-3xl text-orange-600 font-serif font-semibold">{heading}</h3>
+                        <h3 className="text-3xl text-orange-600 font-semibold">{heading}</h3>
                         <p className="text-gray-600 leading-relaxed">{para}</p>
                         {secondPara && (
                             <p className="text-gray-600 leading-relaxed">{secondPara}</p>

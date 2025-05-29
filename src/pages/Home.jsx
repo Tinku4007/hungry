@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
 
 const Home = () => {
   return (
-    <div className="font-serif text-gray-900">
+    <div className=" text-gray-900">
       <Swiper
         modules={[Navigation, Pagination, A11y, Autoplay]}
         // spaceBetween={20}
@@ -141,7 +141,7 @@ const Home = () => {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
-        <h2 className="text-center text-3xl font-serif font-semibold mb-10">Selected Menu</h2>
+        <h2 className="text-center text-3xl  font-semibold mb-10">Selected Menu</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ul className="space-y-5">
@@ -257,7 +257,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid md:grid-cols-2 items-center gap-6">
             <div>
-              <h2 className="text-3xl font-serif font-semibold mb-4">Our wine selection to complement your meal</h2>
+              <h2 className="text-3xl  font-semibold mb-4">Our wine selection to complement your meal</h2>
               <p className="mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
@@ -290,7 +290,7 @@ const Home = () => {
         </section> */}
 
       {/* <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 text-center">
-          <h2 className="text-3xl font-serif font-semibold mb-12">Happy Customer</h2>
+          <h2 className="text-3xl  font-semibold mb-12">Happy Customer</h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-6">
             <div className="bg-pink-100 p-6 rounded-lg max-w-xs mx-auto text-left">
@@ -315,14 +315,14 @@ const Home = () => {
       <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
 
       <div className='max-w-7xl mx-auto px-4 md:px-10 py-20'>
-        <h3 className="text-3xl mb-5 text-orange-600 font-serif font-semibold">FAQ’s</h3>
+        <h3 className="text-3xl mb-5 text-orange-600  font-semibold">FAQ’s</h3>
         <Accordion defaultExpanded>
           <AccordionSummary
             // expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">How can I make a booking at your restaurant</h3>
+            <h3 className="text-xl text-black  font-semibold">How can I make a booking at your restaurant</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
@@ -337,7 +337,7 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">Can I book Hungry Baker for a private event?</h3>
+            <h3 className="text-xl text-black  font-semibold">Can I book Hungry Baker for a private event?</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
@@ -353,7 +353,7 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">Do you offer corporate catering services?</h3>
+            <h3 className="text-xl text-black  font-semibold">Do you offer corporate catering services?</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
@@ -370,7 +370,7 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">What’s so special about your Five Senses Coffee?</h3>
+            <h3 className="text-xl text-black  font-semibold">What’s so special about your Five Senses Coffee?</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">
@@ -386,7 +386,7 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black font-serif font-semibold">Where to get the best coffee in Castle?</h3>
+            <h3 className="text-xl text-black  font-semibold">Where to get the best coffee in Castle?</h3>
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-gray-600 leading-relaxed">

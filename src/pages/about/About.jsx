@@ -87,7 +87,7 @@ const About = () => {
     return (
         <div className="w-full text-gray-800">
             {/* Hero Section */}
-            <section className="relative h-[70vh] bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}>
+            <section className="relative h-80 bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}>
                 <div className="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0"></div>
                 <h1 className="text-5xl font-bold z-10">About Us</h1>
             </section>
