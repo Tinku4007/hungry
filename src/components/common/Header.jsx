@@ -52,7 +52,7 @@ const Header = () => {
             <li><Link to="/about" onClick={closeDrawer} className="hover:text-orange-600">About</Link></li>
             <li><Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Menu</Link></li>
             <li><Link to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition">Catering</Link></li>
-            <li><Link to="#" className="hover:text-orange-600 transition">Gallery</Link></li>
+            <li><Link to="/gallery" className="hover:text-orange-600 transition">Gallery</Link></li>
             <li><Link to="/contact" onClick={closeDrawer} className="hover:text-orange-600">Contact</Link></li>
           </ul>
         </div>
