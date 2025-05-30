@@ -1,63 +1,68 @@
 import { IconButton, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import React from 'react';
+import cake_img from "../../assets/images/cake.jpg"
+import fishSoup_img from "../../assets/images/fish_souo.jpg"
+import cola_drink_img from "../../assets/images/cola_drink.jpg"
+import cake_drink_img from "../../assets/images/cake_drink.jpg"
+import pizza_img from "../../assets/images/pizza.jpg"
+import burger_img from "../../assets/images/burger.jpg"
+import casserole_img from "../../assets/images/casserole.jpg"
 
 const Gallery = () => {
     const itemData = [
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/07/dessert3-950x950.jpg',
+            img: cake_img,
             title: 'Cakes',
             author: '@bkristastucchio',
             caption: 'Desserts',
         },
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/05/blog-2.jpg',
+            img: fishSoup_img,
             title: 'Fish soup',
             author: '@rollelflex_graphy726',
             caption: 'Dishes',
         },
         {
-            img: "http://www.hungrybakers.com.au/wp-content/uploads/2021/04/gallery-i-5-950x693.jpg",
+            img: cola_drink_img,
             title: 'Cola',
             author: '@helloimnik',
             caption: 'Drinks',
         },
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/05/blog-5.jpg',
+            img: cake_drink_img,
             title: 'Cake',
             author: '@nolanissac',
             caption: 'Desserts',
         },
-
-
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/04/gallery-i-5-950x693.jpg',
-            title: 'Bear',
-            author: '@nolanissac',
-            caption: 'Drinks',
-        },
-        {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/04/gallery-i-3-950x634.jpg',
+            img: pizza_img,
             title: 'Pizza',
             author: '@nolanissac',
             caption: 'Dishes',
         },
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/04/gallery-i-2-950x634.jpg',
+            img: burger_img,
             title: 'Burger',
             author: '@nolanissac',
             caption: 'Dishes',
         },
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/04/gallery-i-6-950x588.jpg',
+            img: casserole_img,
             title: 'Casserole',
             author: '@nolanissac',
             caption: 'Dishes',
         },
         {
-            img: 'http://www.hungrybakers.com.au/wp-content/uploads/2021/07/dessert3-950x950.jpg',
-            title: 'Cakes',
+            img: burger_img,
+            title: 'Burger',
             author: '@nolanissac',
             caption: 'Dishes',
+        },
+        {
+            img: cake_img,
+            title: 'Cakes',
+            author: '@bkristastucchio',
+            caption: 'Desserts',
         },
         // Add more items if needed
     ];

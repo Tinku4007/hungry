@@ -15,7 +15,9 @@ const SliderCstm = ({ item, images }) => {
       autoplay={{ delay: 2000, disableOnInteraction: false }}
       speed={1500}
       loop={true}
-      className='w-full h-full'
+      // height={null}
+      autoHeight={true}
+      className='w-full h-full mySwiper'
       breakpoints={{
         320: {
           slidesPerView: 1,
@@ -54,14 +56,14 @@ const SliderCstm = ({ item, images }) => {
         item?.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-10 mb-10 rounded-lg shadow-md">
                 {/* <p className="mb-2">Awesome Experience.</p> */}
                 <div className='text-center flex justify-center mb-2'>
                   <img src={item?.src} alt="src" />
                 </div>
                 <h4 className="font-semibold mb-3">{item?.name}</h4>
                 <div className="flex justify-center mb-2">{item?.rating}</div>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm line-clamp-5 h-[100px] text-gray-600 mb-4">
                   {item?.description}
                 </p>
               </div>

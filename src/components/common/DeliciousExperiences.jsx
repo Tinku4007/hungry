@@ -3,7 +3,7 @@ import React from 'react'
 const DeliciousExperiences = ({title , bgImage}) => {
     return (
         <section
-            className="relative bg-cover bg-center py-[200px] flex items-center justify-center text-white text-center px-6"
+            className="relative bg-cover bg-center py-[100px] md:py-[200px] flex items-center justify-center text-white text-center px-6"
             style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${bgImage}')`,  backgroundAttachment:"fixed", }}
         >
             <div className="relative z-10">

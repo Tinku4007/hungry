@@ -11,8 +11,39 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import SliderCstm from '../components/SliderCstm'
+import chris from "../assets/images/chris.png"
+import star_img from "../assets/images/star_img.png"
+import sanjeshni from "../assets/images/sanjeshni.png"
+import bill from "../assets/images/bill.png"
 
 const Home = () => {
+  const review = [
+    {
+      src:star_img,
+      name: "Alexander Little",
+      rating: "⭐⭐⭐⭐⭐",
+      description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
+    },
+    {
+      src: sanjeshni,
+      name: "Sanjeshni Lata",
+      rating: "⭐⭐⭐⭐⭐",
+      description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
+    },
+    {
+      src: chris,
+      name: "Chris Dow",
+      rating: "⭐⭐⭐⭐⭐",
+      description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
+    },
+    {
+      src: bill,
+      name: "Bill",
+      rating: "⭐⭐⭐⭐⭐",
+      description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
+    },
+  ]
   return (
     <div className=" text-gray-900">
       <Swiper
@@ -20,7 +51,7 @@ const Home = () => {
         // spaceBetween={20}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }}
         speed={3500}
         loop={true}
         className='w-full h-full'
@@ -36,7 +67,7 @@ const Home = () => {
             }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1  data-aos="zoom-in-up" className="text-white mb-10 text-5xl  md:text-7xl font-semibold max-w-3xl leading-snug">
+              <h1 data-aos="zoom-in-up" className="text-white mb-6 text-5xl  md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
               <TheameButton title='ORDER ONLINE' />
@@ -52,7 +83,7 @@ const Home = () => {
             }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1 className="text-white mb-10 text-5xl md:text-7xl font-semibold max-w-3xl leading-snug">
+              <h1 className="text-white mb-6 text-5xl md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
               <TheameButton title='ORDER ONLINE' />
@@ -314,6 +345,11 @@ const Home = () => {
 
       <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
 
+      <section className="py-16 px-4 md:px-16 text-center">
+        <h2 className="text-3xl font-bold mb-8">Happy Customer</h2>
+        <SliderCstm item={review} />
+      </section >
+
       <div className='max-w-7xl mx-auto px-4 md:px-10 py-20'>
         <h3 className="text-3xl mb-5 text-orange-600  font-semibold">FAQ’s</h3>
         <Accordion defaultExpanded>
@@ -322,10 +358,10 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black  font-semibold">How can I make a booking at your restaurant</h3>
+            <h3 className="text-base md:text-xl text-black  font-semibold">How can I make a booking at your restaurant</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
               Head to our website to open a booking at Hungry Baker, one of the leading Castle Hill restaurants. Select a date and time to book a table for up to 8 guests. For bookings of 10 or more people, enter the number in the box corresponding to the ‘request for a group’ section. You can call us at 0298327770 to make your request, and we will do our best to accommodate your request in line with the Government restrictions and regulations.
             </p>
           </AccordionDetails>
@@ -337,10 +373,10 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black  font-semibold">Can I book Hungry Baker for a private event?</h3>
+            <h3 className="text-base md:text-xl text-black  font-semibold">Can I book Hungry Baker for a private event?</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Yes! Hungry Baker, one of the best
               , also cater for group celebrations and private events. We feature Mediterranean-inspired lunches together with a carefully selected collection of coffee, smoothies and juices. Our relaxed alfresco area provides the perfect space for your next event including, birthdays, graduation parties, and more. You can relax and unwind with your group in a casual setting. Call 0298327770 to book your space.
             </p>
@@ -353,10 +389,10 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black  font-semibold">Do you offer corporate catering services?</h3>
+            <h3 className="text-base md:text-xl text-black  font-semibold">Do you offer corporate catering services?</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Yes! Do you have a work meeting or get together? Stuck in the office? We have got you covered! Hungry Baker, one of the
               , offer corporate catering in the Hills delivered to your door. Our delicious menu option includes a variety of food options that can be tailored to meet your requirements. Delivery available!
             </p>
@@ -370,10 +406,10 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black  font-semibold">What’s so special about your Five Senses Coffee?</h3>
+            <h3 className="text-base md:text-xl text-black  font-semibold">What’s so special about your Five Senses Coffee?</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Five Senses coffee at our
               is made with the purpose to impact people positively through coffee. At Hungry Baker, we believe that delicious coffee has an incredible ability to connect people, relationships that make the world just that little bit better. Call 0298327770 for more details.
             </p>
@@ -386,10 +422,10 @@ const Home = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <h3 className="text-xl text-black  font-semibold">Where to get the best coffee in Castle?</h3>
+            <h3 className="text-base md:text-xl text-black  font-semibold">Where to get the best coffee in Castle?</h3>
           </AccordionSummary>
           <AccordionDetails>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Hungry Baker, a top-rated
               , is the perfect place for coffee addicts and aficionados. At Hungry Baker, you are welcomed by the rich aromas of Five Senses coffee and daily fresh treats. We serve you a classic Australian breakfast alongside remarkable coffee. We are open for breakfast and lunch daily on Monday to Friday. Call  0298327770 to find out more.
             </p>

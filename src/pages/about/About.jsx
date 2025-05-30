@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import DeliciousExperiences from '../../components/common/DeliciousExperiences'
 import ImageText from '../../components/common/ImageText'
 import SliderCstm from '../../components/SliderCstm'
+import chris from "../../assets/images/chris.png"
+import star_img from "../../assets/images/star_img.png"
+import sanjeshni from "../../assets/images/sanjeshni.png"
+import bill from "../../assets/images/bill.png"
 
 const stats = [
     { label: 'Visitors daily', value: '200 +' },
@@ -58,32 +62,32 @@ const About = () => {
         });
     };
 
-    const review = [
-        {
-            src: "https://lh3.googleusercontent.com/a-/ALV-UjUyz09Y4dgOh8sZ4Xhp0SyGrhtL1eZYfUrRkRphXiTXEOiiJptiEg=w54-h54-p-rp-mo-ba4-br100",
-            name: "Alexander Little",
-            rating: "⭐⭐⭐⭐⭐",
-            description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
-        },
-        {
-            src: "https://lh3.googleusercontent.com/a-/ALV-UjVvlQAPR4drXJkhgcwLyu5gRvHlBkdwJHRXq-ybupTs1ujhmFm3=w54-h54-p-rp-mo-ba3-br100",
-            name: "Sanjeshni Lata",
-            rating: "⭐⭐⭐⭐⭐",
-            description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
-        },
-        {
-            src: "https://lh3.googleusercontent.com/a-/ALV-UjVIB7O1z0dW2r-E2dC2s8wML47Jy2e-HGKBBUaypVAXSscoKiA=w54-h54-p-rp-mo-ba5-br100",
-            name: "Chris Dow",
-            rating: "⭐⭐⭐⭐⭐",
-            description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
-        },
-        {
-            src: "https://lh3.googleusercontent.com/a-/ALV-UjWeh3bLk7pFb8YdHW4o6WOzIYYdqxKCyAxy1VoED1y5YDHBuJ9E=w54-h54-p-rp-mo-ba5-br100",
-            name: "Bill",
-            rating: "⭐⭐⭐⭐⭐",
-            description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
-        },
-    ]
+  const review = [
+    {
+      src:star_img,
+      name: "Alexander Little",
+      rating: "⭐⭐⭐⭐⭐",
+      description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
+    },
+    {
+      src: sanjeshni,
+      name: "Sanjeshni Lata",
+      rating: "⭐⭐⭐⭐⭐",
+      description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
+    },
+    {
+      src: chris,
+      name: "Chris Dow",
+      rating: "⭐⭐⭐⭐⭐",
+      description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
+    },
+    {
+      src: bill,
+      name: "Bill",
+      rating: "⭐⭐⭐⭐⭐",
+      description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
+    },
+  ]
     return (
         <div className="w-full text-gray-800">
             {/* Hero Section */}
@@ -126,7 +130,7 @@ const About = () => {
             {/* Accomplishments */}
             <section
                 ref={sectionRef}
-                className="py-[150px] bg-cover bg-center bg-fixed text-white relative"
+                className="py-[90px] md:py-[150px] bg-cover bg-center bg-fixed text-white relative"
                 style={{
                     backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')",
                 }}
