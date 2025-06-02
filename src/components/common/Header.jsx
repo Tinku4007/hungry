@@ -37,7 +37,7 @@ const Header = () => {
           {/* <li><Link  className="hover:text-orange-600 transition">Blog</Link></li> */}
           <li><Link to='/contact' className="hover:text-orange-600 transition">Contact</Link></li>
         </ul>
-        <div className="hidden md:block bg-orange-600 text-white px-4 py-1 rounded cursor-pointer hover:bg-orange-700 transition">BOOK ONLINE</div>
+        <Link to='/event' className="hidden md:block bg-orange-600 text-white px-4 py-1 rounded cursor-pointer hover:bg-orange-700 transition">BOOK ONLINE</Link>
         <div onClick={toggleDrawer} className="md:hidden cursor-pointer text-gray-600">&#9776;</div>
       </nav>
 

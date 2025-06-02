@@ -70,7 +70,7 @@ const Home = () => {
               <h1 data-aos="zoom-in-up" className="text-white mb-6 text-5xl  md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
-              <TheameButton title='ORDER ONLINE' />
+              <TheameButton to='/event' title='ORDER ONLINE' />
             </div>
           </section>
         </SwiperSlide>
@@ -86,7 +86,7 @@ const Home = () => {
               <h1 className="text-white mb-6 text-5xl md:text-7xl font-semibold max-w-3xl leading-snug">
                 Welcome
               </h1>
-              <TheameButton title='ORDER ONLINE' />
+              <TheameButton to='/event' title='ORDER ONLINE' />
             </div>
           </section>
         </SwiperSlide>
@@ -343,7 +343,7 @@ const Home = () => {
           </div>
         </section> */}
 
-      <DeliciousExperiences title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
+      <DeliciousExperiences to='/event' title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
 
       <section className="py-16 px-4 md:px-16 text-center">
         <h2 className="text-3xl font-bold mb-8">Happy Customer</h2>
