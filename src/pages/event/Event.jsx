@@ -49,8 +49,8 @@ const Event = () => {
             />
 
             <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
-                <div className='grid grid-cols-2 gap-10 items-start'>
-                    <div className="bg-gray-50 p-8 rounded shadow">
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-start'>
+                    <div className="bg-gray-50 md:p-8 p-3 rounded shadow">
                         <h3 className="text-xl font-semibold mb-2">ENQUIRE</h3>
                         {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                         {/* <form className="grid gap-4"> */}
@@ -68,11 +68,11 @@ const Event = () => {
                             onSubmit={handleSubmit}
                         >
                             <Form className='grid gap-4'>
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <InputField name='name' placeholder='Your Name' />
                                     <InputField name='email' placeholder='Email Address' />
                                 </div>
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <InputField name='phone_number' type='number' placeholder='Phone Number' />
                                     <InputField name='number_people' placeholder='Number Of People' />
                                 </div>
@@ -83,7 +83,7 @@ const Event = () => {
                                         <option value="lunch">Lunch</option>
                                     </InputField>
                                 </div>
-                                <div className='grid grid-cols-2 gap-4'>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                                     <InputField name='date' type='date' />
                                     <InputField name='time' type='time' />
                                 </div>

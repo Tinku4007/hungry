@@ -16,6 +16,9 @@ import chris from "../assets/images/chris.png"
 import star_img from "../assets/images/star_img.png"
 import sanjeshni from "../assets/images/sanjeshni.png"
 import bill from "../assets/images/bill.png"
+import welcomehungrybaker_img from "../assets/images/welcomehungrybaker.jpg"
+import eatry_img_img from "../assets/images/catering.jpg"
+import event_img from "../assets/images/event.jpg"
 
 const Home = () => {
   const review = [
@@ -102,7 +105,7 @@ const Home = () => {
         duration="500"
 
         heading='WELCOME TO HUNGRY BAKER'
-        image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/home_intro.jpg'
+        image={welcomehungrybaker_img}
         para='Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents of greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
         secondPara='As a family-owned business, we strive to build an atmosphere that welcomes you in with the warmth of coming home; The surrounds and relaxed ambience are complemented by food and beverages set to heighten your senses and calm the noise of the day.'
       />
@@ -127,7 +130,7 @@ const Home = () => {
         easing="ease-in-sine"
         duration="500"
         heading='EVENTS'
-        image='https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/470185357_1349871159758319_3884551672326250717_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=q0dJ1o-voMoQ7kNvwFtZ3Hl&_nc_oc=AdkSzwZK9pMcHeXvyzGySGcSzKzfStlGLR11mnXSoaaKxQ-hYuFoHSVshuoh-vdvXD55hYpsBGMI0d_O9wPaWnvW&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=rI8m56ud9lSiX233vK16jg&oh=00_AfLtJagLJK4NTFFBRUxmhMt-VDjA5LEsgUu2aPHmPtkDaA&oe=68326519'
+        image={event_img}
         para='When the occasion arises, experience wholesome Mediterranean-inspired Breakfast and Lunch together with a carefully selected collection of Coffees and Smoothies and Juices. Here to help you unwind and relax with good company in a casual, familiar setting. With our relaxed indoor alfresco area we able to offer the perfect space for your next event, so get in touch and we can tailor something to suit!'
         secondPara='Speak to one of the team next time your in and we would love to discuss your event.'
       />
@@ -140,7 +143,7 @@ const Home = () => {
 
         reverse={true}
         heading='CATERING'
-        image='https://media.licdn.com/dms/image/v2/D4D12AQGCfNd46fzsJw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1658750246612?e=2147483647&v=beta&t=nJr6jTcqirUruQaLPwXU3crVbOhYQt1-fM_Pch97VW4'
+        image={eatry_img_img}
         para='When you have a Work Meeting, Get together or just Stuck in the office? That’s ok, we offer corporate catering in the Hills delivered to your door! We have a variety of menus or we can tailor something to you your requirements. Speak to one of the team next time your in or simply send us an email.'
       />
 

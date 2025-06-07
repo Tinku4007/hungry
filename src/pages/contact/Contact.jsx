@@ -15,16 +15,16 @@ const Contact = () => {
 
       {/* Contact Form & Info */}
       <div className="grid md:grid-cols-2 gap-8 px-6 py-12 max-w-6xl mx-auto">
-        <div className="bg-gray-50 p-8 rounded shadow">
+        <div className="bg-gray-50 md:p-8 p-3 rounded shadow">
           <h3 className="text-xl font-semibold mb-2">You Can Mail Us</h3>
           {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           <form className="grid gap-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input className="border p-2 rounded" placeholder="Your Name" />
               <input className="border p-2 rounded" placeholder="Email Address" />
             </div>
             <input className="border p-2 rounded" placeholder="Subject" />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input className="border p-2 rounded" placeholder="Company (optional)" />
               <input className="border p-2 rounded" placeholder="Phone (optional)" />
             </div>

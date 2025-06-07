@@ -6,6 +6,9 @@ import chris from "../../assets/images/chris.png"
 import star_img from "../../assets/images/star_img.png"
 import sanjeshni from "../../assets/images/sanjeshni.png"
 import bill from "../../assets/images/bill.png"
+import slider_Ladki_image from "../../assets/images/slider_Ladki_image.jpg"
+import knife_cake_img from "../../assets/images/knife-cake.jpg"
+import about_img1 from "../../assets/images/about_img1.jpg"
 
 const stats = [
     { label: 'Visitors daily', value: '200 +' },
@@ -121,7 +124,7 @@ const About = () => {
                 // imageWrapper='min-h-[500px]'
                 reverse={true}
                 heading='ABOUT US'
-                image='https://www.hudsongeorge.com.au/wp-content/uploads/2019/12/about_img1.jpg'
+                image={about_img1}
                 para='Hungry Baker is a contemporary eatery set in Sydney’s leafy Hills District that brings a rich Hamptons style together with a familiar classic décor. The clean lines, accents and greenery and a light-filled alfresco area offer an intimate setting for breakfast, lunch and dinner.'
                 secondPara='As a family-owned business, we strive to build an atmosphere that welcomes you in with the warmth of coming home; The surrounds and relaxed ambience are complemented by food and beverages set to heighten your senses and calm the noise of the day.'
             />
@@ -170,7 +173,7 @@ const About = () => {
             <section className="py-16 px-4 md:px-16">
                 <h3 className="text-center text-orange-500 text-sm font-semibold">Our Specials</h3>
                 <h2 className="text-center text-3xl font-bold mb-10">A Taste You’ll Never Forget</h2>
-                <SliderCstm images={true} item={['https://media.istockphoto.com/id/867378776/photo/chef-is-working-in-an-italian-restaurant.jpg?s=612x612&w=0&k=20&c=a-MG3kO4wXiuc7jPcF2u31grt6y_hwwM11Ye4pgE2is=', 'https://media.istockphoto.com/id/530625117/photo/traditional-hungarian-xmas-rolls-bejgli.jpg?s=612x612&w=0&k=20&c=PQK8Jmd5k7vZN8sZKDPH0OQrkr6N2lyTbRT_fjuG9UY=',
+                <SliderCstm images={true} item={[knife_cake_img, slider_Ladki_image,
                     'https://scontent.fixc4-2.fna.fbcdn.net/v/t39.30808-6/487206015_1254290099810017_4456269061556823549_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RN8CFIQtc_EQ7kNvwEtogEy&_nc_oc=Adni03V7BqKe8HKKcgb63LjiExrv0jvZ2kYCelHdgfE0hxAeCqEStUATSrD6zJ5q9TpbUAA1wMPlUsvKcC9LiUxq&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=XEUdn6F_VCOYtFLFzwwsig&oh=00_AfKNxWW503ClllwlIi-0ZQ8LV-cp7Ki_r0SRrZzMKcxkcw&oe=683270A9',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486639365_1253632353209125_8298364058678702170_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=68UhGyvo3BQQ7kNvwHPeNjt&_nc_oc=AdmI-gYCHXoDUerHz1VkW0_y1xom7NH2noQfvLlQlzEVlqnPilcwsUe4Y4DhBR0qYgZXeY1nzgr1Hdy2zaXA0QNk&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=amTGSVgP5ODUq-m4bJxQMA&oh=00_AfLWuYjGCiSecduUpP6Y4S1hlyb3GvNbg44p32eJ-C5KZw&oe=6832771E',
                     'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486679754_1252974476608246_979976901725611562_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vdI6nGE4pDcQ7kNvwFpHwfc&_nc_oc=AdmKFucCYiNAWsjC0bh4a-B7-U_k1RTf1Vm1Ub6VLokCDvlcc4f6Rw1bZzHxPPPYBpHwyvwhD39x_D9ckoe6aMzB&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=qJXWEdPxjaji9c4_Lvzc0Q&oh=00_AfK_2jII8DrxY2WG6okgK5wtWVysdrT0qMv4K62Nc5oM8g&oe=68327C8A'
