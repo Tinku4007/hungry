@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
+import { Form, Formik } from 'formik';
+import InputField from '../../components/common/InputField';
 
 const Contact = () => {
+  const formRef = useRef(); // Step 1
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (values, { resetForm }) => {
+    // Step 4 - send the actual HTML form
+    setLoading(true)
+    emailjs.sendForm(
+      'service_hxpljg1',
+      'template_iown3cf',
+      formRef.current,
+      'BT_QtSEPmCpCUjnxl'
+    ).then(
+      () => {
+        toast.success("Form Sent Successfully ✅");
+        resetForm(); // reset the form after successful submission
+        setLoading(false); // stop loading
+      },
+      (error) => {
+        console.log('FAILED...', error?.text || error);
+        toast.error("Failed to send the form ❌");
+        setLoading(false); // stop loading
+      }
+    );
+  };
+
   return (
     <div className="bg-white text-gray-800 font-sans">
 
@@ -15,10 +44,58 @@ const Contact = () => {
 
       {/* Contact Form & Info */}
       <div className="grid md:grid-cols-2 gap-8 px-6 py-12 max-w-6xl mx-auto">
+        {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
         <div className="bg-gray-50 md:p-8 p-3 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">You Can Mail Us</h3>
-          {/* <p className="text-sm mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-          <form className="grid gap-4">
+          <h3 className="text-xl font-semibold mb-2">ENQUIRE</h3>
+
+          <Formik
+            initialValues={{
+              name: '',
+              email: '',
+              phone_number: '',
+              number_people: '',
+              seating: '',
+              date: '',
+              time: '',
+              message: ''
+            }}
+            onSubmit={handleSubmit}
+          >
+            {({ isSubmitting }) => (
+              <Form ref={formRef} className='grid gap-4'> {/* Step 3 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <InputField required name='name' placeholder='Your Name' />
+                  <InputField required name='email' placeholder='Email Address' />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <InputField required name='phone_number' type='number' placeholder='Phone Number' />
+                  <InputField required name='number_people' placeholder='Number Of People' />
+                </div>
+                <div className="w-full">
+                  <InputField required className='w-full' as='select' name='seating'>
+                    <option value="">Select Seating</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                  </InputField >
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                  <InputField required name='date' type='date' />
+                  <InputField required name='time' type='time' />
+                </div>
+                <InputField required as='textarea' rows={4} name='message' placeholder='Message' />
+                <button
+                  disabled={loading}
+                  type='submit'
+                  className={`bg-orange-600 text-white py-2 rounded transition-opacity ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  {loading ? 'Sending...' : 'Get Started'}
+                </button>
+                {/* <button disabled={isSubmitting} type='submit' className="bg-orange-600 text-white py-2 rounded">Get Started</button> */}
+              </Form>
+            )}
+          </Formik>
+        </div>
+        {/* <form className="grid gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input className="border p-2 rounded" placeholder="Your Name" />
               <input className="border p-2 rounded" placeholder="Email Address" />
@@ -30,8 +107,7 @@ const Contact = () => {
             </div>
             <textarea className="border p-2 rounded" placeholder="Message" rows="4"></textarea>
             <button className="bg-orange-600 text-white py-2 rounded">Get Started</button>
-          </form>
-        </div>
+          </form> */}
 
         <div className="p-8">
           <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
@@ -41,7 +117,7 @@ const Contact = () => {
               <strong>Phone:</strong> 0298327770
             </div>
             <div>
-              <strong>Email:</strong> hungrybaker.catering@gmail.com  
+              <strong>Email:</strong> hungrybaker.catering@gmail.com
             </div>
             <div>
               <strong>Address:</strong><br />Shop 3, 1-5 INTERCHANCE DRIVE EASTERN CREEK
@@ -79,7 +155,7 @@ const Contact = () => {
         ></iframe>
       </div>
 
-</div>
+    </div>
   )
 }
 

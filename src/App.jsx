@@ -6,9 +6,10 @@ import { RouterProvider } from 'react-router-dom'
 import { route } from './routing/routing'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-
+  
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <RouterProvider router={route} />
+      <ToastContainer />
     </>
   )
 }
