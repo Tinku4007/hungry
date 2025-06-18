@@ -4,6 +4,8 @@ import InputField from '../../components/common/InputField';
 import { Form, Formik } from 'formik';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import event_page_img from "../../assets/images/event_page.jpg"
+import { Link } from 'react-router-dom';
 
 const Event = () => {
     const formRef = useRef(); // Step 1
@@ -33,12 +35,26 @@ const Event = () => {
 
     return (
         <>
-            <div className="relative h-80 bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style={{ backgroundImage: `url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg')` }}>
+            <section
+                className="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+                style={{
+                    backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(${event_page_img})`,
+                }}
+            >
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div data-aos="fade-down" className="z-10 text-center">
-                    <h2 className="text-4xl mt-2">Event</h2>
+
+                <div data-aos="fade-down" className="relative z-10 text-center px-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+                        Host Your Event with Us
+                    </h1>
+                    <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
+                        Celebrate with style, flavor, and a warm atmosphere. Let’s make your next event unforgettable.
+                    </p>
+                    {/* <Link to="#enquire" className="inline-block mt-8 bg-orange-500 hover:bg-orange-600 transition-colors duration-300 text-white px-6 py-3 rounded-full font-semibold shadow-lg">
+                        Make an Enquiry
+                    </Link> */}
                 </div>
-            </div>
+            </section>
 
             <ImageText
                 aos="fade-right"
@@ -51,7 +67,7 @@ const Event = () => {
                 secondPara='Chat with our team next time you’re in to discuss your event or contact us by phone or email.'
             />
 
-            <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
+            <section id='enquire' className="max-w-7xl mx-auto px-4 md:px-10 py-20">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-start'>
                     <div className="bg-gray-50 md:p-8 p-3 rounded shadow">
                         <h3 className="text-xl font-semibold mb-2">ENQUIRE</h3>

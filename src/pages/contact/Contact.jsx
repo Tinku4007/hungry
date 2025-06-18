@@ -34,13 +34,19 @@ const Contact = () => {
     <div className="bg-white text-gray-800 font-sans">
 
       {/* Hero Section */}
-      <div className="relative h-80 bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold" style={{ backgroundImage: `url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg')` }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="z-10 text-center">
-          <p className="text-sm font-light">THE STORY BEHIND</p>
-          <h2 className="text-4xl mt-2">Contact Us</h2>
+      <div
+        className="relative h-80 bg-cover bg-center flex items-center justify-center text-white"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="z-10 text-center px-4">
+          <p className="text-sm font-light tracking-widest uppercase">The Story Behind</p>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2">Contact Us</h2>
         </div>
       </div>
+
 
       {/* Contact Form & Info */}
       <div className="grid md:grid-cols-2 gap-8 px-6 py-12 max-w-6xl mx-auto">

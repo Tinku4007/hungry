@@ -19,11 +19,14 @@ import bill from "../assets/images/bill.png"
 import welcomehungrybaker_img from "../assets/images/welcomehungrybaker.jpg"
 import eatry_img_img from "../assets/images/catering.jpg"
 import event_img from "../assets/images/event.jpg"
+import main_home_page from "../assets/images/main-home-page.jpg"
+import hungryBaker_img from "../assets/images/hungryBaker.jpg"
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const review = [
     {
-      src:star_img,
+      src: star_img,
       name: "Alexander Little",
       rating: "⭐⭐⭐⭐⭐",
       description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
@@ -48,52 +51,52 @@ const Home = () => {
     },
   ]
   return (
-    <div className=" text-gray-900">
+    <div>
       <Swiper
         modules={[Navigation, Pagination, A11y, Autoplay]}
-        // spaceBetween={20}
         navigation
         pagination={{ clickable: true }}
-        // autoplay={{ delay: 3000, disableOnInteraction: false }}
-        speed={3500}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        speed={1200}
         loop={true}
-        className='w-full h-full'
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        className="w-full h-screen"
       >
-        <SwiperSlide>
-          <section
-            className="relative bg-cover bg-center h-[80vh]"
-            style={{
-              // backgroundAttachment: "fixed",
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${home_img})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1 data-aos="zoom-in-up" className="text-white mb-6 text-5xl  md:text-7xl font-semibold max-w-3xl leading-snug">
-                Welcome
-              </h1>
-              <TheameButton to='/event' title='ORDER ONLINE' />
-            </div>
-          </section>
-        </SwiperSlide>
-        <SwiperSlide>
-          <section
-            className="relative bg-cover bg-center h-[80vh]"
-            style={{
-              // backgroundAttachment: "fixed",
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg')`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-              <h1 className="text-white mb-6 text-5xl md:text-7xl font-semibold max-w-3xl leading-snug">
-                Welcome
-              </h1>
-              <TheameButton to='/event' title='ORDER ONLINE' />
-            </div>
-          </section>
-        </SwiperSlide>
+        {[
+          home_img,
+          'https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg',
+          main_home_page,
+          hungryBaker_img,
+        ].map((img, index) => (
+          <SwiperSlide key={index}>
+            <section
+              className="relative w-full h-screen bg-center bg-cover"
+              style={{
+                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.2)), url(${img})`,
+              }}
+            >
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-8">
+                <h1
+                  className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-2"
+                >
+                  Welcome to
+                </h1>
+                <h2 className="text-yellow-400 text-3xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg mb-4">
+                  HUNGRY BAKER
+                </h2>
+                <p className="text-white text-base sm:text-lg md:text-xl max-w-xl">
+                  Discover delightful meals and heavenly treats with us.
+                </p>
+                <Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer">
+                  <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+                    Explore Menu
+                  </button>
+                </Link>
+              </div>
+            </section>
+          </SwiperSlide>
+        ))}
       </Swiper>
+
       {/* Hero Section */}
 
 
@@ -152,80 +155,48 @@ const Home = () => {
         style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
-        <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid grid-cols-1 md:grid-cols-3 gap-6">
           <h2 className="col-span-full text-3xl font-semibold mb-6 text-center md:text-left">Why we are the best in food quality</h2>
 
           <div className="bg-black bg-opacity-40 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-2">Skilled Chefs</h3>
-            <p className="text-sm">Learn lorem dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <p className="text-sm">At Hungry Baker, our expert chefs and cooks blend creativity with precision to craft exceptional baked goods. With years of experience and a passion for perfection, they deliver fresh, flavorful treats that keep our customers coming back for more.</p>
           </div>
           <div className="bg-black bg-opacity-40 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-2">Fresh Products</h3>
-            <p className="text-sm">Learn lorem dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <p className="text-sm">At Hungry Baker, we pride ourselves on using only the freshest ingredients in all our baked goods. From oven-fresh pies, sausages to handcrafted pastries, every product is made daily to ensure top quality, rich flavor, and unbeatable freshness in every bite.</p>
           </div>
           <div className="bg-black bg-opacity-40 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2">Bamboo Bar's Best Bar</h3>
-            <p className="text-sm">Learn lorem dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-          </div>
-          <div className="bg-black bg-opacity-40 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2">Vegan Cuisine</h3>
-            <p className="text-sm">Learn lorem dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <h3 className="text-xl font-semibold mb-2">Savory Bakes</h3>
+            <p className="text-sm">From meat pies to quiches, Hungry Baker's savory range uses fresh herbs, quality meats, and rich fillings to create satisfying, wholesome options for any time of day.</p>
           </div>
         </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
-        <h2 className="text-center text-3xl  font-semibold mb-10">Selected Menu</h2>
+        <h2 className="text-center text-3xl underline  font-semibold mb-10">HOT BAR ( Chef’s Choice )</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ul className="space-y-5">
             <li>
               <div className="flex justify-between">
                 <div>
-                  <h3 className="font-semibold">STEAK TARTARE BUTTER</h3>
-                  <p className="text-sm text-gray-400">Steak tartare, seasoned butter</p>
+                  <h3 className="font-semibold">CURRIES</h3>
+                  <p className="text-sm text-gray-400">Butter chicken/Chilli chicken/Honey chicken/Oyster chicken/Hoisin chicken</p>
+                  <p className="text-sm text-gray-400">Yellow curry/Green curry/Red curry/Beef curryn</p>
                 </div>
-                <div className="text-orange-600 font-semibold">$35</div>
+                {/* <div className="text-orange-600 font-semibold">$35</div> */}
               </div>
             </li>
 
             <li>
               <div className="flex justify-between">
                 <div>
-                  <h3 className="font-semibold">SOUP OF CONSOMME</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
+                  <h3 className="font-semibold">PAN section</h3>
+                  <p className="text-sm text-gray-400">Chicken pasta/pesto pasta/chorizo pasta/chicken and bacon pasta</p>
+                  <p className="text-sm text-gray-400">mushroom chicken</p>
                 </div>
-                <div className="text-orange-600 font-semibold">$19</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">CHICKEN WITH PEANUTS</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$29</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">JULIARD LAMB STEAK</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$40</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">RISOTTO WITH SEAFOOD</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$20</div>
+                {/* <div className="text-orange-600 font-semibold">$19</div> */}
               </div>
             </li>
           </ul>
@@ -234,53 +205,28 @@ const Home = () => {
             <li>
               <div className="flex justify-between">
                 <div>
-                  <h3 className="font-semibold">STEAK TARTARE BUTTER</h3>
-                  <p className="text-sm text-gray-400">Steak tartare, seasoned butter</p>
+                  <h3 className="font-semibold">NOODLES</h3>
+                  <p className="text-sm text-gray-400">Hokkien chicken/beef noodles</p>
+                  <p className="text-sm text-gray-400">Rice chicken/beef noodles</p>
                 </div>
-                <div className="text-orange-600 font-semibold">$35</div>
+                {/* <div className="text-orange-600 font-semibold">$40</div> */}
               </div>
             </li>
 
             <li>
               <div className="flex justify-between">
                 <div>
-                  <h3 className="font-semibold">SOUP OF CONSOMME</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
+                  <h3 className="font-semibold">RICE</h3>
+                  <p className="text-sm text-gray-400">Saffron rice</p>
+                  <p className="text-sm text-gray-400">fried rice</p>
                 </div>
-                <div className="text-orange-600 font-semibold">$19</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">CHICKEN WITH PEANUTS</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$29</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">JULIARD LAMB STEAK</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$40</div>
-              </div>
-            </li>
-
-            <li>
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-semibold">RISOTTO WITH SEAFOOD</h3>
-                  <p className="text-sm text-gray-400">Simple and balanced. A seasonal table.</p>
-                </div>
-                <div className="text-orange-600 font-semibold">$20</div>
+                {/* <div className="text-orange-600 font-semibold">$29</div> */}
               </div>
             </li>
           </ul>
+        </div>
+        <div className='text-center mt-16'>
+          <TheameButton to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer" title='MENU ORDER' />
         </div>
       </section>
 
@@ -346,7 +292,7 @@ const Home = () => {
           </div>
         </section> */}
 
-      <DeliciousExperiences to='/event' title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' />
+      {/* <DeliciousExperiences to='/event' title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' /> */}
 
       <section className="py-16 px-4 md:px-16 text-center">
         <h2 className="text-3xl font-bold mb-8">Happy Customer</h2>

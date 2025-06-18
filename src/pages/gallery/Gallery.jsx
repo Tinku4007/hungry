@@ -55,7 +55,7 @@ const Gallery = () => {
     };
 
     return (
-        <div className="gallery-container px-4 py-6">
+        <div className="gallery-container px-4 py-6 pt-[150px]">
             <ImageList cols={cols} gap={20}>
                 {itemData.map((item, index) => (
                     <ImageListItem

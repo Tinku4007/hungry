@@ -49,15 +49,15 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-            <input
+            <h3 className="text-xl font-semibold mb-4">Social Links</h3>
+            {/* <input
               type="text"
               placeholder="Enter your username"
               className="w-full px-4 py-2 mb-3 bg-white text-black rounded focus:outline-none"
             />
             <button className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">
               Get Started
-            </button>
+            </button> */}
             <div className='pt-3 flex items-center gap-2'>
               <Link to='https://www.facebook.com/thehungrybakerEK' target='_blank'>
                 <FacebookOutlinedIcon sx={{
