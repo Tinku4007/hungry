@@ -8,7 +8,11 @@ import sanjeshni from "../../assets/images/sanjeshni.png"
 import bill from "../../assets/images/bill.png"
 import slider_Ladki_image from "../../assets/images/slider_Ladki_image.jpg"
 import knife_cake_img from "../../assets/images/knife-cake.jpg"
-import about_img1 from "../../assets/images/about_img1.jpg"
+import about_img1 from "../../assets/images/kitchen.jpg"
+import chawal_img1 from "../../assets/images/chawal.jpg"
+import aamlet_img1 from "../../assets/images/aamlet.jpg"
+import role_img1 from "../../assets/images/role.jpg"
+import { Link } from 'react-router-dom'
 
 const stats = [
     { label: 'Visitors daily', value: '200 +' },
@@ -65,55 +69,57 @@ const About = () => {
         });
     };
 
-  const review = [
-    {
-      src:star_img,
-      name: "Alexander Little",
-      rating: "⭐⭐⭐⭐⭐",
-      description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
-    },
-    {
-      src: sanjeshni,
-      name: "Sanjeshni Lata",
-      rating: "⭐⭐⭐⭐⭐",
-      description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
-    },
-    {
-      src: chris,
-      name: "Chris Dow",
-      rating: "⭐⭐⭐⭐⭐",
-      description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
-    },
-    {
-      src: bill,
-      name: "Bill",
-      rating: "⭐⭐⭐⭐⭐",
-      description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
-    },
-  ]
+    const review = [
+        {
+            src: star_img,
+            name: "Alexander Little",
+            rating: "⭐⭐⭐⭐⭐",
+            description: " Delicious burger. Need to come here again there was so many great looking dishes on the menu. Service was lovely and prompt. Great outdoor shaded area for chill vibes. Definetely coming back here. Those chips were SO crispy 🍔🤯"
+        },
+        {
+            src: sanjeshni,
+            name: "Sanjeshni Lata",
+            rating: "⭐⭐⭐⭐⭐",
+            description: "  Just love this place. Awesome coffee, friendly atmosphere and lovely people."
+        },
+        {
+            src: chris,
+            name: "Chris Dow",
+            rating: "⭐⭐⭐⭐⭐",
+            description: "  This is the best quality food for a suit down meal in the area. Actually it's the only decent food place in the area. Big selection of meals including healthy options. Recommended. Be aware it gets very busy at lunchtime!"
+        },
+        {
+            src: bill,
+            name: "Bill",
+            rating: "⭐⭐⭐⭐⭐",
+            description: " Whenever I’m in Sydney, I take my team here as a little treat. Even though we’re a fairly large group and don’t make it easy for the poor staff by ordering in a disorganized way, the staff here are always so helpful and good humoured. It doesn’t hurt that the food is pretty decent too!"
+        },
+    ]
     return (
         <div className="w-full">
             {/* Hero Section */}
             <section
-  className="relative h-screen bg-cover bg-center text-white flex items-center justify-center"
-  style={{
-    backgroundImage: "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')",
-  }}
->
-  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+                className="relative h-screen bg-cover bg-center text-white flex items-center justify-center"
+                style={{
+                    backgroundImage: "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-2.jpg')",
+                }}
+            >
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-  <div className="relative z-10 text-center px-4 md:px-10">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
-      Discover Our Story
-    </h1>
-    <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
-      From heartwarming recipes to unforgettable experiences — learn why Hungry Baker is more than just food.
-    </p>
-    <button className="mt-8 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-500 transition duration-300">
-      Explore More
-    </button>
-  </div>
-</section>
+                <div className="relative z-10 text-center px-4 md:px-10">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                        Discover Our Story
+                    </h1>
+                    <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
+                        From heartwarming recipes to unforgettable experiences — learn why Hungry Baker is more than just food.
+                    </p>
+                    <Link to="/event">
+                        <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+                            Book a Table
+                        </button>
+                    </Link>
+                </div>
+            </section>
 
 
             <ImageText
@@ -142,7 +148,7 @@ const About = () => {
 
                 <div className="relative z-10 text-center">
                     <h2 data-aos="fade-down" className="text-3xl font-bold mb-10">Our accomplishments</h2>
-                    <div  data-aos="zoom-in-up" className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center px-4">
+                    <div data-aos="zoom-in-up" className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center px-4">
                         {stats.map((item, i) => (
                             <div key={i} className="bg-white text-black p-6 rounded-lg shadow-md">
                                 <h3 className="text-2xl lg:text-6xl font-bold">
@@ -174,9 +180,9 @@ const About = () => {
                 <h3 className="text-center text-orange-500 text-sm font-semibold">Our Specials</h3>
                 <h2 className="text-center text-3xl font-bold mb-10">A Taste You’ll Never Forget</h2>
                 <SliderCstm images={true} item={[knife_cake_img, slider_Ladki_image,
-                    'https://scontent.fixc4-2.fna.fbcdn.net/v/t39.30808-6/487206015_1254290099810017_4456269061556823549_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RN8CFIQtc_EQ7kNvwEtogEy&_nc_oc=Adni03V7BqKe8HKKcgb63LjiExrv0jvZ2kYCelHdgfE0hxAeCqEStUATSrD6zJ5q9TpbUAA1wMPlUsvKcC9LiUxq&_nc_zt=23&_nc_ht=scontent.fixc4-2.fna&_nc_gid=XEUdn6F_VCOYtFLFzwwsig&oh=00_AfKNxWW503ClllwlIi-0ZQ8LV-cp7Ki_r0SRrZzMKcxkcw&oe=683270A9',
-                    'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486639365_1253632353209125_8298364058678702170_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=68UhGyvo3BQQ7kNvwHPeNjt&_nc_oc=AdmI-gYCHXoDUerHz1VkW0_y1xom7NH2noQfvLlQlzEVlqnPilcwsUe4Y4DhBR0qYgZXeY1nzgr1Hdy2zaXA0QNk&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=amTGSVgP5ODUq-m4bJxQMA&oh=00_AfLWuYjGCiSecduUpP6Y4S1hlyb3GvNbg44p32eJ-C5KZw&oe=6832771E',
-                    'https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/486679754_1252974476608246_979976901725611562_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vdI6nGE4pDcQ7kNvwFpHwfc&_nc_oc=AdmKFucCYiNAWsjC0bh4a-B7-U_k1RTf1Vm1Ub6VLokCDvlcc4f6Rw1bZzHxPPPYBpHwyvwhD39x_D9ckoe6aMzB&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=qJXWEdPxjaji9c4_Lvzc0Q&oh=00_AfK_2jII8DrxY2WG6okgK5wtWVysdrT0qMv4K62Nc5oM8g&oe=68327C8A'
+                    aamlet_img1,
+                    chawal_img1,
+                    role_img1
                 ]} />
             </section>
 

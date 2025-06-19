@@ -12,7 +12,7 @@ const SliderCstm = ({ item, images }) => {
       spaceBetween={20}
       navigation
       pagination={{ clickable: true }}
-      // autoplay={{ delay: 2000, disableOnInteraction: false }}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
       speed={1500}
       loop={true}
       // height={null}

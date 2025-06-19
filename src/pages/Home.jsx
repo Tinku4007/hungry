@@ -51,7 +51,7 @@ const Home = () => {
     },
   ]
   return (
-    <div>
+    <>
       <Swiper
         modules={[Navigation, Pagination, A11y, Autoplay]}
         navigation
@@ -59,7 +59,8 @@ const Home = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         speed={1200}
         loop={true}
-        className="w-full h-screen"
+        className="w-full h-screen overflow-hidden"
+        style={{ overflowX: 'hidden' }}
       >
         {[
           home_img,
@@ -86,9 +87,9 @@ const Home = () => {
                 <p className="text-white text-base sm:text-lg md:text-xl max-w-xl">
                   Discover delightful meals and heavenly treats with us.
                 </p>
-                <Link to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer">
+                <Link to="/event">
                   <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
-                    Explore Menu
+                    Book a Table
                   </button>
                 </Link>
               </div>
@@ -230,70 +231,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section
-          className="relative bg-cover bg-center py-20"
-          style={{ backgroundImage: "url('https://pxdraft.com/wrap/hungry/assets/img/home-banner-4.jpg" }}
-        >
-          <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="relative max-w-7xl mx-auto px-4 md:px-10 text-white grid md:grid-cols-2 items-center gap-6">
-            <div>
-              <h2 className="text-3xl  font-semibold mb-4">Our wine selection to complement your meal</h2>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <div>
-              <ul className="space-y-2 text-right">
-                <li className="flex justify-between">
-                  <span>Cabernet</span>
-                  <span>$120</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Merlot</span>
-                  <span>$120</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Chardonnay</span>
-                  <span>$120</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Pinot noir</span>
-                  <span>$120</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Kenfrancous</span>
-                  <span>$120</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section> */}
-
-      {/* <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 text-center">
-          <h2 className="text-3xl  font-semibold mb-12">Happy Customer</h2>
-
-          <div className="flex flex-col md:flex-row justify-center gap-6">
-            <div className="bg-pink-100 p-6 rounded-lg max-w-xs mx-auto text-left">
-              <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
-              <p className="text-sm mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div className="font-semibold">Travis Warren</div>
-              <div className="text-xs text-gray-400">New York</div>
-            </div>
-            <div className="bg-blue-100 p-6 rounded-lg max-w-xs mx-auto text-left">
-              <div className="text-orange-600 font-semibold mb-2">Awesome Experience</div>
-              <p className="text-sm mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div className="font-semibold">Travis Warren</div>
-              <div className="text-xs text-gray-400">New York</div>
-            </div>
-          </div>
-        </section> */}
-
-      {/* <DeliciousExperiences to='/event' title='We create delicious experiences' bgImage='https://pxdraft.com/wrap/hungry/assets/img/home-banner-5.jpg' /> */}
-
       <section className="py-16 px-4 md:px-16 text-center">
         <h2 className="text-3xl font-bold mb-8">Happy Customer</h2>
         <SliderCstm item={review} />
@@ -381,8 +318,7 @@ const Home = () => {
           </AccordionDetails>
         </Accordion>
       </div>
-
-    </div>
+    </>
   )
 }
 

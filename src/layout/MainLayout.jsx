@@ -5,12 +5,12 @@ import Footer from '../components/common/Footer'
 
 const MainLayout = () => {
   return (
-    <div>
-        <Header />
-        <div>
-            <Outlet />
-        </div>
-        <Footer/>
+    <div className='overflow-x-hidden'>
+      <Header />
+      <div>
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   )
 }

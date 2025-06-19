@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from "../../assets/images/logo.png";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
+  const location = useLocation()
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
   const closeDrawer = () => setIsDrawerOpen(false);
 
   return (
     <>
       {/* Top Navbar */}
-      <header className='absolute w-full z-10'>
+      <header className={`absolute w-full ${location.pathname == '/gallery' && 'bg-[#121118]'} z-10`}>
         <nav className="flex justify-between items-center py-3 px-6 md:px-20 top-0 z-50">
           <div className="text-2xl font-bold text-orange-600">
             <Link to='/'><img className='w-[200px] invert-[1]' src={logo} alt="logo" /></Link>
@@ -35,13 +35,13 @@ const Header = () => {
 
           {/* Centered Menu Items */}
           <div className="flex-1 flex flex-col font-semibold justify-center items-center space-y-6 text-white text-3xl tracking-wide">
-            <Link to="/" onClick={closeDrawer}>HOME</Link>
-            <Link to="/about" onClick={closeDrawer}>ABOUT</Link>
-            <Link to="/event" onClick={closeDrawer}>EVENTS</Link>
-            <Link href="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer">MENU</Link>
-            <Link href="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer">CATERING</Link>
-            <Link to="/gallery" onClick={closeDrawer}>GALLERY</Link>
-            <Link to="/contact" onClick={closeDrawer}>CONTACT</Link>
+            <Link className='hover:text-black' to="/" onClick={closeDrawer}>HOME</Link>
+            <Link className='hover:text-black' to="/about" onClick={closeDrawer}>ABOUT</Link>
+            <Link className='hover:text-black' to="/event" onClick={closeDrawer}>EVENTS</Link>
+            <Link className='hover:text-black' to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer">MENU</Link>
+            <Link className='hover:text-black' to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer">CATERING</Link>
+            <Link className='hover:text-black' to="/gallery" onClick={closeDrawer}>GALLERY</Link>
+            <Link className='hover:text-black' to="/contact" onClick={closeDrawer}>CONTACT</Link>
             <button className="bg-white text-[#95b6bb] px-6 py-2 text-xl mt-4 rounded">
               0298327770
             </button>
