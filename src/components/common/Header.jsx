@@ -39,7 +39,8 @@ const Header = () => {
             <Link className='hover:text-black' to="/about" onClick={closeDrawer}>ABOUT</Link>
             <Link className='hover:text-black' to="/event" onClick={closeDrawer}>EVENTS</Link>
             <Link className='hover:text-black' to="/menu_250420_142636[1].pdf" target="_blank" rel="noopener noreferrer">MENU</Link>
-            <Link className='hover:text-black' to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer">CATERING</Link>
+            {/* <Link className='hover:text-black' to="/catering menu_250420_142610.pdf" target="_blank" rel="noopener noreferrer">CATERING</Link> */}
+            <Link className='hover:text-black'  onClick={closeDrawer} to="/catering">CATERING</Link>
             <Link className='hover:text-black' to="/gallery" onClick={closeDrawer}>GALLERY</Link>
             <Link className='hover:text-black' to="/contact" onClick={closeDrawer}>CONTACT</Link>
             <button className="bg-white text-[#95b6bb] px-6 py-2 text-xl mt-4 rounded">

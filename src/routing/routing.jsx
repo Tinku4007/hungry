@@ -5,6 +5,7 @@ import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 import Event from "../pages/event/Event";
 import Gallery from "../pages/gallery/Gallery";
+import Catering from "../pages/catering/Catering";
 
 export const route = createBrowserRouter(
     [
@@ -36,6 +37,11 @@ export const route = createBrowserRouter(
                     index: true,
                     path: "/event",
                     element: <Event />
+                },
+                   {
+                    index: true,
+                    path: "/catering",
+                    element: <Catering />
                 },
             ]
         }

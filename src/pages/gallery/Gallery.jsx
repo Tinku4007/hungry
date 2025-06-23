@@ -20,6 +20,8 @@ import cake_drink_img from "../../assets/images/cake_drink.jpg";
 import pizza_img from "../../assets/images/pizza.jpg";
 import burger_img from "../../assets/images/burger.jpg";
 import casserole_img from "../../assets/images/casserole.jpg";
+import aamlet_img from "../../assets/images/aamletpng.jpg";
+import rice_img from "../../assets/images/rice-kadhi.jpg";
 
 const Gallery = () => {
     const theme = useTheme();
@@ -37,8 +39,8 @@ const Gallery = () => {
         { img: pizza_img, title: 'Pizza', caption: 'Dishes' },
         { img: burger_img, title: 'Burger', caption: 'Dishes' },
         { img: casserole_img, title: 'Casserole', caption: 'Dishes' },
-        { img: burger_img, title: 'Burger', caption: 'Dishes' },
-        { img: cake_img, title: 'Cakes', caption: 'Desserts' },
+        { img: aamlet_img, title: 'omlet', caption: 'Dishes' },
+        { img: rice_img, title: 'Rice', caption: 'Desserts' },
     ];
 
     const [open, setOpen] = useState(false);
