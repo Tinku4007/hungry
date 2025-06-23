@@ -90,11 +90,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
           <div className="flex gap-6 mb-4 md:mb-0">
-            <a href="#">Privacy & Policy</a>
-            <a href="#">Faq’s</a>
-            <a href="#">Get a Quote</a>
+            <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
+            <Link to="/event">Events</Link>
+            <Link to="/gallery">Gallery</Link>
           </div>
-          <p>© 2023 Hungry Baker</p>
+          <p>© 2025 Hungry Baker</p>
         </div>
       </footer>
     </>
