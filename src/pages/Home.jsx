@@ -5,7 +5,7 @@ import ImageText from '../components/common/ImageText'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import her_sec from "../assets/images/WhatsApp Image 2025-05-22 at 22.28.32_efff7f22.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import home_img from '../assets/images/home_1.jpeg'
+import home_img from '../assets/images/slider_Image_1.jpeg'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -19,8 +19,9 @@ import bill from "../assets/images/bill.png"
 import welcomehungrybaker_img from "../assets/images/hungary_baker.jpg"
 import eatry_img_img from "../assets/images/catering.jpg"
 import event_img from "../assets/images/event.jpg"
-import main_home_page from "../assets/images/main-home-page.jpg"
-import hungryBaker_img from "../assets/images/hungryBaker.jpg"
+import main_home_page from "../assets/images/slide_image_2.jpeg"
+import hungryBaker_img from "../assets/images/sldier_image_3.jpeg"
+import hungryBaker_img_4 from "../assets/images/slide_image_4.jpeg"
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -63,8 +64,9 @@ const Home = () => {
         style={{ overflowX: 'hidden' }}
       >
         {[
+          hungryBaker_img_4,
           home_img,
-          'https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg',
+          // 'https://nomadsouthbay.com/wp-content/uploads/2021/12/restaurant-interior-private-parties.jpg',
           main_home_page,
           hungryBaker_img,
         ].map((img, index) => (

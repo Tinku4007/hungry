@@ -47,8 +47,8 @@ body{
 
 .swiper-button-prev , .swiper-button-next {
     background: #fff;
-    width: 40px !important;
-    height: 40px !important;
+    width: 35px !important;
+    height: 35px !important;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -56,5 +56,5 @@ body{
 }
 
 .swiper-button-prev:after,.swiper-button-next:after {
-    font-size: 26px !important;
+    font-size: 18px !important;
 }
